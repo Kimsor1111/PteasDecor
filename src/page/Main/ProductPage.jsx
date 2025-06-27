@@ -36,8 +36,11 @@ const ProductPage = () => {
   };
   const [filter, setFilter] = useState(false);
   useEffect(() => {
-    if (filter) document.body.style.overflowY = "hidden";
-    else document.body.style.overflowY = "auto";
+    if (filter) {
+      document.querySelector("body").style.cssText = "overflow-y: hidden";
+    } else {
+      document.querySelector("body").style.cssText = "overflow-y: auto";
+    }
   }, [filter]);
   return (
     <main className="w-screen lg:w-full h-screen relative lg:flex overflow-scroll">
