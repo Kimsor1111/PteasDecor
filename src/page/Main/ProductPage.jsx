@@ -37,9 +37,9 @@ const ProductPage = () => {
   const [filter, setFilter] = useState(false);
   useEffect(() => {
     if (filter) {
-      document.querySelector("body").style.cssText = "overflow-y: hidden";
+      document.querySelector(".body").style.cssText = "overflow-y: hidden";
     } else {
-      document.querySelector("body").style.cssText = "overflow-y: auto";
+      document.querySelector(".body").style.cssText = "overflow-y: auto";
     }
   }, [filter]);
   return (
