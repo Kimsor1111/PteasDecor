@@ -1,5 +1,5 @@
 import BigHeroImg from "./../../assets/Home/BigHero.jpg";
-import P1 from "./../../assets/Product/P1.jpg";
+import P1 from "./../../assets/Product/p1.jpg";
 export const BigHeroData = {
   img: BigHeroImg,
   title:
