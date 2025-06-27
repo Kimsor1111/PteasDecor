@@ -14,10 +14,13 @@ const navbar = () => {
   const [menuopen, setMenuopen] = useState(false);
   useEffect(() => {
     if (menuopen) {
-      document.querySelector(".body").style.cssText = "overflow-y: hidden";
+      document.body.style.overflow = "hidden";
     } else {
-      document.querySelector(".body").style.cssText = "overflow-y: auto";
+      document.body.style.overflow = "auto";
     }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [menuopen]);
   return (
     <>
