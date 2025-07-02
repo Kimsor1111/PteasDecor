@@ -13,7 +13,7 @@ const ProductCard = ({ img, discount, price, name }) => {
         <h1 className="text-[18px] font-oxygen text-[#404040] w-full text-center">
           {name}
         </h1>
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center gap-2">
           <span>
             <p>
               {discount > 0 && (
@@ -24,7 +24,7 @@ const ProductCard = ({ img, discount, price, name }) => {
               ${price}
             </p>
           </span>
-          <span className="rounded-full border-[1px] border-black w-[25px] h-[25px] flex justify-center items-center pb-[3px] pr-[0.5px] cursor-pointer">
+          <span className="rounded-full border-[1px] border-black w-[25px] h-[25px] flex justify-center items-center pb-[3.5px] pr-[0.3px] cursor-pointer">
             +
           </span>
         </div>

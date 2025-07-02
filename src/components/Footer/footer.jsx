@@ -32,7 +32,10 @@ const footer = () => {
               {title}
             </li>
             {submenu.map(({ name, path, icon }, i) => (
-              <li key={i} className="text-sm text-white/50 hover:text-white">
+              <li
+                key={i}
+                className="w-fit text-sm text-white/50 hover:text-white"
+              >
                 <Link
                   to={path}
                   className="flex items-center gap-2 font-medium font-poppins"
