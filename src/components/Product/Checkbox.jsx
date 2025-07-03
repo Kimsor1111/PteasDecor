@@ -3,7 +3,7 @@ const Checkbox = ({ label, value, topic, onChange }) => {
     <li>
       <label className="flex items-center gap-3 text-[16px] text-[#414141]">
         <input
-          className="mt-1"
+          className="mt-1 w-5 h-5 lg:w-4 lg:h-4"
           type="checkbox"
           checked={topic === value}
           onChange={() => onChange(value)}

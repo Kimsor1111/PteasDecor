@@ -46,9 +46,9 @@ const ProductPage = () => {
     };
   }, [filter]);
   return (
-    <main className="w-screen lg:w-full h-screen relative lg:flex overflow-scroll">
+    <main className="w-screen lg:w-full h-auto relative lg:flex mt-[20px]">
       <aside
-        className={`lg:w-[21%] w-full md:w-1/2 items-center fixed lg:translate-x-0 z-[10] bg-white h-screen flex flex-col lg:items-end gap-[20px] lg:sticky lg:top-0 top-20 duration-500 ${
+        className={`lg:w-[21%] fixed lg:sticky top-20 lg:top-[15%] w-[85%] md:w-1/2 lg:translate-x-0 z-[10] bg-white h-full duration-500 ${
           filter ? "translate-x-0" : "translate-x-[-100%]"
         }`}
       >
@@ -59,37 +59,39 @@ const ProductPage = () => {
             icon={faX}
           />
         </div>
-        <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit lg:mt-[20px] w-[220px]">
-          <span className="border-s-2 border-black ps-2 text-[22px] font-medium text-[#2D2D2D]">
-            Categories
-          </span>
-          <ul className="flex flex-col gap-2 mt-2">
-            {options.map(({ label, value }) => (
-              <Checkbox
-                key={value}
-                label={label}
-                value={value}
-                topic={category}
-                onChange={handleCategory}
-              />
-            ))}
-          </ul>
-        </div>
-        <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit w-[220px]">
-          <span className="border-s-2 border-black ps-2 text-[22px] font-medium text-[#2D2D2D]">
-            Price Range
-          </span>
-          <ul className="flex flex-col gap-2 mt-2">
-            {priceRange.map(({ label, value }) => (
-              <Checkbox
-                key={value}
-                label={label}
-                value={value}
-                topic={price}
-                onChange={handlePrice}
-              />
-            ))}
-          </ul>
+        <div className="w-full h-auto lg:overflow-y-auto lg:max-h-[calc(100vh-160px)] flex flex-col lg:items-end items-center gap-[20px] lg:py-[20px]">
+          <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit lg:mt-[20px] w-[230px] lg:w-[75%]">
+            <span className="border-s-2 border-black ps-2 text-[22px] font-medium text-[#2D2D2D]">
+              Categories
+            </span>
+            <ul className="flex flex-col gap-2 mt-2">
+              {options.map(({ label, value }) => (
+                <Checkbox
+                  key={value}
+                  label={label}
+                  value={value}
+                  topic={category}
+                  onChange={handleCategory}
+                />
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit w-[230px] lg:w-[75%]">
+            <span className="border-s-2 border-black ps-2 text-[22px] font-medium text-[#2D2D2D]">
+              Price Range
+            </span>
+            <ul className="flex flex-col gap-2 mt-2">
+              {priceRange.map(({ label, value }) => (
+                <Checkbox
+                  key={value}
+                  label={label}
+                  value={value}
+                  topic={price}
+                  onChange={handlePrice}
+                />
+              ))}
+            </ul>
+          </div>
         </div>
       </aside>
       <div
@@ -97,8 +99,8 @@ const ProductPage = () => {
           filter ? "block" : "hidden"
         }`}
       ></div>
-      <aside className="lg:w-[79%] w-screen flex flex-col items-center z-[1]">
-        <div className="lg:w-[93%] h-screen flex flex-col items-center lg:items-baseline gap-5">
+      <aside className="lg:w-[79%] w-screen h-full flex flex-col items-center z-[1]">
+        <div className="lg:w-[93%] flex flex-col items-center lg:items-baseline gap-5">
           <span className="text-[26px] lg:text-[36px] w-full lg:w-fit text-center font-oxygen font-semibold text-[#3D3D3D]">
             Our Collection Of Products
           </span>
@@ -130,7 +132,7 @@ const ProductPage = () => {
               sapiente nihil maxime blanditiis repellendus.
             </span>
           </div>
-          <div className="grid grid-cols-2 justify-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-[30px] space-y-5 mx-10 lg:mx-0">
+          <div className="grid grid-cols-2 justify-center md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-[30px] space-y-5 mx-10 lg:mx-0">
             {product.map(({ name, price, discount, img }, index) => (
               <ProductCard
                 key={index}
@@ -141,7 +143,7 @@ const ProductPage = () => {
               />
             ))}
           </div>
-          <div className="flex flex-col items-center w-full gap-4 pb-[50px]">
+          <div className="flex flex-col items-center w-full gap-4">
             <span className="text-[#414141] text-[16px]">
               Showing 12 of 24 item(s)
             </span>

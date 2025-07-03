@@ -24,7 +24,7 @@ const ProductCard = ({ img, discount, price, name }) => {
               ${price}
             </p>
           </span>
-          <span className="rounded-full border-[1px] border-black w-[25px] h-[25px] flex justify-center items-center pb-[3.5px] pr-[0.3px] cursor-pointer">
+          <span className="rounded-full border-[1px] border-black w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center pb-[3.5px] pr-[0.3px] cursor-pointer">
             +
           </span>
         </div>
