@@ -8,7 +8,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const footer = () => {
   return (
-    <footer className="w-full pt-10 bg-[#20263e] flex flex-col items-center">
+    <footer className="w-full pt-10 mt-32 bg-[#20263e] flex flex-col items-center">
       <div className="flex flex-col items-center justify-center w-full py-5 h-fit">
         <img src={logo} alt="PteasDecor" className="w-[180px]" />
         <h1 className="my-3 font-oxygen tracking-wider text-white md:text-3xl text-xl 2xl:w-1/4 2xl:px-0 px-5 md:leading-[45px] text-center">

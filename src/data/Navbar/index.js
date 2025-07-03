@@ -16,11 +16,11 @@ export const MenuLi = [
   },
   {
     name: "About Us",
-    path: "/",
+    path: "/AboutUs",
   },
   {
     name: "Blog",
-    path: "/",
+    path: "/Blog",
   },
 ];
 export const SocialIcon = [

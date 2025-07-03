@@ -1,6 +1,9 @@
 export { default as Navbar } from "./Navbar/navbar";
 export { default as Footer } from "./Footer/footer";
 export { default as ProductCard } from "./Product/ProductCard";
-export { default as Checkbox } from "./Product/Checkbox";
 export { default as BigHero } from "./Home/BigHeroSection";
 export { default as CategoryCard } from "./Home/CategoryCard";
+export { default as CustomerReview } from "./Home/CustomerRating";
+export { default as BlogCard } from "./Home/BlogCard";
+export { default as QuestionDropDown } from "./Home/QuestionDropDown";
+export { default as Checkbox } from "./Product/Checkbox";
