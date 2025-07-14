@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Checkbox, ProductCard } from "./../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faGreaterThan,
+  faChevronRight,
   faSearch,
   faSliders,
   faX,
@@ -149,7 +149,7 @@ const ProductPage = () => {
             </span>
             <button className="flex gap-2 items-center bg-[#282828] px-3 py-1 rounded-full text-white text-[16px] font-poppins">
               Load More
-              <FontAwesomeIcon className="text-[12px]" icon={faGreaterThan} />
+              <FontAwesomeIcon className="text-[12px]" icon={faChevronRight} />
             </button>
           </div>
         </div>
