@@ -12,6 +12,7 @@ import { ProductItem } from "./../../data/Product";
 const ProductPage = () => {
   const product = ProductItem;
   const options = [
+    { label: "All Categories", value: "All Categories"},
     { label: "Electronic Devices", value: "Electronic Devices" },
     { label: "Office Decors", value: "Office Decors" },
     { label: "Natural Decors", value: "Natural Decors" },
@@ -20,17 +21,18 @@ const ProductPage = () => {
     { label: "Bathroom Decors", value: "Bathroom Decors" },
   ];
   const priceRange = [
+    {label: "Default Price", value: "Default Price"},
     { label: "$0.00 - $20.00", value: "$0.00 - $20.00" },
     { label: "$20.00 - $50.00", value: "$20.00 - $50.00" },
     { label: "$50.00 - $100.00", value: "$50.00 - $100.00" },
     { label: "$100.00 - $200.00", value: "$100.00 - $200.00" },
     { label: "$200.00 - $500.00", value: "$200.00 - $500.00" },
   ];
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("All Categories");
   const handleCategory = (value) => {
     setCategory((prev) => (prev === value ? "" : value));
   };
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState("Default Price");
   const handlePrice = (value) => {
     setPrice((prev) => (prev === value ? "" : value));
   };
@@ -48,7 +50,7 @@ const ProductPage = () => {
   return (
     <main className="w-screen lg:w-full h-auto relative lg:flex mt-[20px]">
       <aside
-        className={`lg:w-[21%] fixed lg:sticky top-20 lg:top-[15%] w-[85%] md:w-1/2 lg:translate-x-0 z-[10] bg-white h-full duration-500 ${
+        className={`lg:w-[27%] xl:w-[22%] fixed lg:sticky top-20 lg:top-[15%] w-[85%] md:w-1/2 lg:translate-x-0 z-[10] bg-white h-full duration-500 ${
           filter ? "translate-x-0" : "translate-x-[-100%]"
         }`}
       >
@@ -59,8 +61,8 @@ const ProductPage = () => {
             icon={faX}
           />
         </div>
-        <div className="w-full h-auto lg:overflow-y-auto lg:max-h-[calc(100vh-160px)] flex flex-col lg:items-end items-center gap-[20px] lg:py-[20px]">
-          <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit lg:mt-[20px] w-[230px] lg:w-[75%]">
+        <div className="w-full h-auto lg:overflow-y-auto lg:max-h-[calc(100vh-100px)] flex flex-col lg:items-center items-center gap-[20px] lg:py-[20px]">
+          <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit lg:mt-[10px] w-[230px] lg:w-[240px] xl:w-[80%]">
             <span className="border-s-2 border-black ps-2 text-[22px] font-medium text-[#2D2D2D]">
               Categories
             </span>
@@ -76,7 +78,7 @@ const ProductPage = () => {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit w-[230px] lg:w-[75%]">
+          <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit w-[230px] lg:w-[240px] xl:w-[80%]">
             <span className="border-s-2 border-black ps-2 text-[22px] font-medium text-[#2D2D2D]">
               Price Range
             </span>
@@ -99,7 +101,7 @@ const ProductPage = () => {
           filter ? "block" : "hidden"
         }`}
       ></div>
-      <aside className="lg:w-[79%] w-screen h-full flex flex-col items-center z-[1]">
+      <aside className="lg:w-[73%] xl:w-[78%] w-screen h-full flex flex-col items-center z-[1]">
         <div className="lg:w-[93%] flex flex-col items-center lg:items-baseline gap-5">
           <span className="text-[26px] lg:text-[36px] w-full lg:w-fit text-center font-oxygen font-semibold text-[#3D3D3D]">
             Our Collection Of Products
