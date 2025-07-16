@@ -6,23 +6,24 @@ const QuestionDropDown = ({ question, answer }) => {
   return (
     <div
       className={`w-full ${
-        dropdown ? "h-[140px]" : "h-[55px]"
+        dropdown
+          ? "2xl:h-[120px] xl:h-[140px] lg:h-[160px] md:h-[120px] h-fit"
+          : "md:h-[55px] h-[75px]"
       } border-[1px] rounded border-[#A6A6A6] transition-[height] duration-400 cursor-pointer p-4 selection:bg-transparent`}
       onClick={() => setDropdown(!dropdown)}
     >
-      <h1 className="w-full relative text-[#222222] lg:text-sm text-sm pr-5">
+      <h1
+        className={`w-full ${
+          dropdown ? "h-fit " : "h-full"
+        } relative text-[#222222] lg:text-sm items-center md:items-baseline text-sm pr-5 flex justify-between`}
+      >
         {question}
-        <FontAwesomeIcon
-          icon={dropdown ? faCaretUp : faCaretDown}
-          className="absolute right-0 top-1/2 -translate-y-1/2"
-        />
+        <FontAwesomeIcon icon={dropdown ? faCaretUp : faCaretDown} />
       </h1>
       <p
         className={`${
-          dropdown
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-[-30px]"
-        } transition-all duration-300 text-[#666666] lg:text-sm text-[12px] mt-5`}
+          dropdown ? "opacity-100 visible" : "opacity-0 invisible"
+        } md:transition-[opacity] md:duration-500 text-[#666666] lg:text-sm text-[12px] mt-5`}
       >
         {answer}
       </p>
