@@ -63,7 +63,7 @@ const Home = () => {
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.
           </p>
         </div>
-        <div className="md:w-[93%] w-[80%] grid md:grid-cols-3 gap-10">
+        <div className="md:w-[93%] w-[95%] grid md:grid-cols-3 gap-10">
           {CategoryData.map(({ title, img }, index) => (
             <CategoryCard key={index} img={img} title={title} />
           ))}
