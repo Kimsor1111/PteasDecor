@@ -17,9 +17,15 @@ const QuestionDropDown = ({ question, answer }) => {
           className="absolute right-0 top-1/2 -translate-y-1/2"
         />
       </h1>
-      {/* {dropdown && ( */}
-      <p className={`${dropdown? 'opacity-100 translate-y-0':'opacity-0 translate-y-[-30px]'} transition-all duration-300 text-[#666666] lg:text-sm text-[12px] mt-5`}>{answer}</p>
-      {/* )} */}
+      <p
+        className={`${
+          dropdown
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-[-30px]"
+        } transition-all duration-300 text-[#666666] lg:text-sm text-[12px] mt-5`}
+      >
+        {answer}
+      </p>
     </div>
   );
 };
