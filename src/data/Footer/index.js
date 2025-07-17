@@ -69,9 +69,9 @@ export const FooterLi = [
       { name: "Home", path: "", icon: faHome },
       { name: "Products", path: "", icon: faTag },
       {
-        name: "About us",
+        name: "Contact us",
         path: "",
-        icon: faHouseUser,
+        icon: faPhone,
       },
       {
         name: "Blog",

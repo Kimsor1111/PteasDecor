@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { MenuLi, SocialIcon } from "../../data/Navbar";
 const navbar = () => {
-  const [user, setUser] = useState(false);
   const [menuopen, setMenuopen] = useState(false);
   useEffect(() => {
     if (menuopen) {
@@ -71,19 +70,12 @@ const navbar = () => {
         </ul>
         {/* Icon list */}
         <div className="flex items-center h-full gap-4 text-lg">
-          <span
+          <Link
+            to={"/LogIn"}
             className="flex items-center gap-2 cursor-pointer"
-            onClick={() => setUser(!user)}
           >
             <FontAwesomeIcon icon={faUser} />
-            <p
-              className={`${
-                user ? "-rotate-90" : "rotate-90"
-              } text-sm transition-all duration-200 font-poppins selection:bg-transparent`}
-            >
-              &gt;
-            </p>
-          </span>
+          </Link>
           <span>
             <FontAwesomeIcon className="cursor-pointer" icon={faShoppingBag} />
           </span>
