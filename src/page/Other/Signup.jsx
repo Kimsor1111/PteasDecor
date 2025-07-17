@@ -9,7 +9,7 @@ const Signup = () => {
   const [visiblePassCon, setVisiblePassCon] = useState(false);
   return (
     <main className="w-full lg:h-[550px] md:h-[600px] h-[800px] flex items-center justify-center font-oxygen mt-24">
-      <div className="lg:w-[95%] w-full h-full grid lg:grid-cols-2 border border-gray-500/50 rounded-2xl relative">
+      <div className="lg:w-[95%] w-full h-full grid lg:grid-cols-2 lg:border border-gray-500/50 rounded-2xl relative">
         <form className="lg:static lg:w-full w-[95%] absolute md:p-8 p-5 bg-white lg:rounded-s-3xl top-1/2 lg:rounded-[0] rounded-xl lg:left-0 lg:top-0 left-1/2 lg:translate-0 -translate-1/2">
           <h1 className="text-[30px] font-bold">Signup</h1>
           <p className="text-md mt-2 text-[#949494]">
