@@ -10,9 +10,9 @@ import {
 import { ProductItem } from "./../../data/Product";
 
 const ProductPage = () => {
-  const product = ProductItem;
+  const [product, setProduct] = useState(ProductItem.slice(0, 8));
   const options = [
-    { label: "All Categories", value: "All Categories"},
+    { label: "All Categories", value: "All Categories" },
     { label: "Electronic Devices", value: "Electronic Devices" },
     { label: "Office Decors", value: "Office Decors" },
     { label: "Natural Decors", value: "Natural Decors" },
@@ -21,7 +21,7 @@ const ProductPage = () => {
     { label: "Bathroom Decors", value: "Bathroom Decors" },
   ];
   const priceRange = [
-    {label: "Default Price", value: "Default Price"},
+    { label: "Default Price", value: "Default Price" },
     { label: "$0.00 - $20.00", value: "$0.00 - $20.00" },
     { label: "$20.00 - $50.00", value: "$20.00 - $50.00" },
     { label: "$50.00 - $100.00", value: "$50.00 - $100.00" },
@@ -127,7 +127,7 @@ const ProductPage = () => {
           </div>
           <div className="w-[80%] lg:w-full text-center lg:text-start">
             <h1 className="text-[16px] text-[#414141] font-semibold">
-              Showing 1-12 of 24 Item(s)
+              Showing 1-{product.length} of {ProductItem.length} Item(s)
             </h1>
             <span className="text-[#949494] text-[16px] ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
@@ -145,15 +145,23 @@ const ProductPage = () => {
               />
             ))}
           </div>
-          <div className="flex flex-col items-center w-full gap-4">
-            <span className="text-[#414141] text-[16px]">
-              Showing 12 of 24 item(s)
-            </span>
-            <button className="flex gap-2 items-center bg-[#282828] px-3 py-1 rounded-full text-white text-[16px] font-poppins">
-              Load More
-              <FontAwesomeIcon className="text-[12px]" icon={faChevronRight} />
-            </button>
-          </div>
+          {product != ProductItem && (
+            <div className="flex flex-col items-center w-full gap-4">
+              <span className="text-[#414141] text-[16px]">
+                Showing {product.length} of {ProductItem.length} item(s)
+              </span>
+              <button
+                className={`flex gap-2 items-center bg-[#282828] px-5 py-2 rounded-full text-white text-[16px] font-poppins active:bg-gray-800 cursor-pointer`}
+                onClick={() => setProduct(ProductItem)}
+              >
+                Load More
+                <FontAwesomeIcon
+                  className="text-[12px]"
+                  icon={faChevronRight}
+                />
+              </button>
+            </div>
+          )}
         </div>
       </aside>
     </main>

@@ -6,4 +6,5 @@ export { default as CategoryCard } from "./Home/CategoryCard";
 export { default as CustomerReview } from "./Home/CustomerRating";
 export { default as BlogCard } from "./Home/BlogCard";
 export { default as QuestionDropDown } from "./Home/QuestionDropDown";
+export { default as BlogWidget } from "./Blog/BlogWidget";
 export { default as Checkbox } from "./Product/Checkbox";

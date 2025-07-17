@@ -83,7 +83,7 @@ const Home = () => {
                 fringilla nunc in molestie feugiat.
               </p>
             </span>
-            <button className="text-white text-[15px] bg-black/90 hover:bg-black h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer">
+            <button className="text-white text-[15px] bg-[#282828] active:bg-gray-800 h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer">
               View All <p className="font-poppins pt-[0.8px]">&gt;</p>
             </button>
           </div>
@@ -125,7 +125,7 @@ const Home = () => {
                 elit, quis pulvina.
               </p>
             </span>
-            <button className="text-white text-[15px] bg-black/90 text-nowrap hover:bg-black h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer">
+            <button className="text-white text-[15px] bg-[#282828] active:bg-gray-800 text-nowrap h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer">
               Read All Blogs <p className="font-poppins pt-[0.8px]">&gt;</p>
             </button>
           </div>
@@ -157,7 +157,7 @@ const Home = () => {
                 fringilla nunc in molestie feugiat.
               </p>
             </span>
-            <button className="w-fit text-white text-[15px] bg-black/90 hover:bg-black h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer">
+            <button className="w-fit text-white text-[15px] bg-[#282828] active:bg-gray-800 h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer">
               Ask A Question <p className="font-poppins pt-[0.8px]">&gt;</p>
             </button>
           </div>

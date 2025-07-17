@@ -39,7 +39,7 @@ const navbar = () => {
         </div>
         <ul className="flex-col items-center px-5 font-semibold text-center uppercase text-md font-oxygen">
           {MenuLi.map(({ name, path }, index) => (
-            <li className="py-5" key={index}>
+            <li className="py-5" key={index} onClick={() => setMenuopen(false)}>
               <Link to={path}>{name}</Link>
             </li>
           ))}
@@ -60,7 +60,11 @@ const navbar = () => {
         {/* Menu list */}
         <ul className="justify-center hidden gap-6 font-semibold uppercase md:flex text-md font-oxygen">
           {MenuLi.map(({ name, path }, index) => (
-            <li key={index} className="text-black/70 hover:text-black">
+            <li
+              key={index}
+              className="text-black/70 hover:text-black"
+              onClick={() => setMenuopen(false)}
+            >
               <Link to={path}>{name}</Link>
             </li>
           ))}

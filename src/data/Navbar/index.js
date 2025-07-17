@@ -16,7 +16,7 @@ export const MenuLi = [
   },
   {
     name: "Contact Us",
-    path: "/Contact Us",
+    path: "/ContactUs",
   },
   {
     name: "Blog",

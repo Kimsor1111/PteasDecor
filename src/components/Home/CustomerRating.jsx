@@ -14,7 +14,7 @@ const CustomerRating = ({ img, title, des, subdes }) => {
             <h1 className="font-oxygen lg:text-start text-center lg:text-[36px] text-[25px] font-[700] ">
               {title}
             </h1>
-            <button className="w-fit text-[15px] bg-black/90 hover:bg-black h-fit hidden lg:flex gap-2 px-4 font-semibold font-oxygen py-2 rounded-3xl cursor-pointer">
+            <button className="w-fit text-[15px] bg-[#282828] active:bg-gray-800 h-fit hidden lg:flex gap-2 px-5 font-semibold font-oxygen py-2 rounded-3xl cursor-pointer">
               Read More <p className="font-poppins pt-[0.8px]">&gt;</p>
             </button>
           </div>
@@ -29,7 +29,7 @@ const CustomerRating = ({ img, title, des, subdes }) => {
               ))}
             </div>
           </div>
-          <button className="w-fit text-[15px] text-white lg:hidden bg-black/90 hover:bg-black h-fit flex gap-2 px-4 font-semibold font-oxygen py-2 rounded-3xl cursor-pointer">
+          <button className="w-fit text-[15px] text-white lg:hidden bg-[#282828] active:bg-gray-800 h-fit flex gap-2 px-5 font-semibold font-oxygen py-2 rounded-3xl cursor-pointer">
             Read More <p className="font-poppins pt-[0.8px]">&gt;</p>
           </button>
         </div>

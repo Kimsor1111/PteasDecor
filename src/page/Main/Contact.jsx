@@ -1,8 +1,8 @@
 const Contact = () => {
   return (
-    <div className="w-full h-full flex justify-center my-[50px] md:my-[100px]">
-      <main className="w-[90%] md:w-[80%] h-full rounded-xl border-2 border-black pb-[50px]">
-        <h1 className="p-[20px] bg-[#20263E] text-white text-[25px] border-b-2 border-black rounded-t-xl font-oxygen">
+    <div className="w-full h-full flex justify-center my-[60px] md:my-[80px]">
+      <main className="w-[95%] md:w-[90%] h-full rounded-[20px] border-2 border-black/30 pb-[50px]">
+        <h1 className="p-[20px] bg-[#20263E] text-white text-[25px] border-b-2 border-black/30 rounded-t-[18px] font-oxygen">
           Get In Touch With Us
         </h1>
         <main className="flex flex-col lg:flex-row px-[30px] py-[30px] gap-[30px] w-full">
@@ -21,16 +21,57 @@ const Contact = () => {
             </div>
           </aside>
           <aside className="w-full lg:w-[60%]">
-            <h1 className="text-[22px] font-semibold font-oxygen">Send us a message</h1>
-            <h1 className="text-gray-600 w-[80%] py-2">Lorem ipsum dolor sit, amet consectetur adipisicing elitle Lorem ipsum dolor sit Lorem ipsum dolor sit amet.</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700 mt-[30px]">
-                <input className="rounded-full border-1 border-gray-400 w-full px-4 py-2 focus:outline-1 focus:outline-[#20263E]" type="text" placeholder="Your Name" />
-                <input className="rounded-full border-1 border-gray-400 w-full px-4 py-2 focus:outline-1 focus:outline-[#20263E]" type="text" placeholder="Your Email" />
-                <input className="rounded-full border-1 border-gray-400 w-full px-4 py-2 focus:outline-1 focus:outline-[#20263E]" type="text" placeholder="Phone Number" />
-                <input className="rounded-full border-1 border-gray-400 w-full px-4 py-2 focus:outline-1 focus:outline-[#20263E]" type="text" placeholder="Subject" />
-            </div>
-            <textarea className="border-2 rounded-xl px-4 py-2 border-gray-300 w-full mt-4 focus:outline-1 focus:outline-[#20263E]" placeholder="Message" name="message" rows={5}></textarea>
-            <button className="text-white bg-[#20263E] rounded-full px-3 py-2 md:px-5 md:py-3 md:text-[18px] font-poppins mt-4 hover:cursor-pointer active:bg-gray-700">Send Message</button>
+            <h1 className="text-[22px] font-semibold font-oxygen">
+              Send us a message
+            </h1>
+            <h1 className="text-gray-600 w-[80%] py-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elitle Lorem
+              ipsum dolor sit Lorem ipsum dolor sit amet.
+            </h1>
+            <form
+              className=" text-gray-700 mt-[30px]"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input
+                  className="rounded-full border border-gray-400 w-full px-4 py-2 focus:outline focus:outline-[#20263E]"
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  className="rounded-full border border-gray-400 w-full px-4 py-2 focus:outline focus:outline-[#20263E]"
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <input
+                  className="rounded-full border border-gray-400 w-full px-4 py-2 focus:outline focus:outline-[#20263E]"
+                  type="text"
+                  placeholder="Phone Number"
+                  required
+                />
+                <input
+                  className="rounded-full border border-gray-400 w-full px-4 py-2 focus:outline focus:outline-[#20263E]"
+                  type="text"
+                  placeholder="Subject"
+                  required
+                />
+                <textarea
+                  className="border rounded-xl px-4 py-2 border-gray-300 w-full focus:outline focus:outline-[#20263E] resize-none"
+                  placeholder="Message"
+                  name="message"
+                  rows={5}
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="text-white w-fit bg-[#20263E] rounded-full px-5 py-2 md:py-3 md:text-[18px] font-poppins mt-4 hover:cursor-pointer active:bg-gray-700"
+              >
+                Send Message
+              </button>
+            </form>
           </aside>
         </main>
       </main>

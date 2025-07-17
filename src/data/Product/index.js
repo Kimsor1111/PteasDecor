@@ -72,4 +72,28 @@ export const ProductItem = [
     discount: 25,
     img: P1,
   },
+  {
+    name: "Double Bed & Side Tables",
+    price: 100.25,
+    discount: 25,
+    img: P1,
+  },
+  {
+    name: "Double Bed & Side Tables",
+    price: 100.25,
+    discount: 25,
+    img: P1,
+  },
+  {
+    name: "Double Bed & Side Tables",
+    price: 100.25,
+    discount: 25,
+    img: P1,
+  },
+  {
+    name: "Double Bed & Side Tables",
+    price: 100.25,
+    discount: 25,
+    img: P1,
+  },
 ];
