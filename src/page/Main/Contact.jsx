@@ -57,14 +57,14 @@ const Contact = () => {
                   placeholder="Subject"
                   required
                 />
-                <textarea
-                  className="border rounded-xl px-4 py-2 border-gray-300 w-full focus:outline focus:outline-[#20263E] resize-none"
-                  placeholder="Message"
-                  name="message"
-                  rows={5}
-                  required
-                />
               </div>
+              <textarea
+                className="border rounded-xl px-4 py-2 mt-5 border-gray-300 w-full focus:outline focus:outline-[#20263E] resize-none"
+                placeholder="Message"
+                name="message"
+                rows={5}
+                required
+              />
               <button
                 type="submit"
                 className="text-white w-fit bg-[#20263E] rounded-full px-5 py-2 md:py-3 md:text-[18px] font-poppins mt-4 hover:cursor-pointer active:bg-gray-700"
