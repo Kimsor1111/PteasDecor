@@ -1,0 +1,35 @@
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useState } from "react"
+import { Link } from "react-router-dom"
+const Login = () => {
+    const [visible, setVisible] = useState(false)
+  return (
+    <main className='w-full h-[550px] flex justify-center font-oxygen mt-24'>
+        <div className='w-full lg:w-[95%] h-full relative flex lg:rounded-2xl border border-gray-500/50'>
+            <form onSubmit={(e) => e.preventDefault()} className='bg-white h-fit rounded-xl lg:w-1/2 w-[80%] lg:h-full absolute top-1/2 left-1/2 -translate-1/2 lg:translate-0 lg:static lg:rounded-s-2xl lg:rounded-e-none p-8'>
+                <h1 className='text-[30px] font-bold'>Login</h1>
+                <h1 className='text-gray-600 mb-12 mt-2'>Do not have an account, <Link to='SignUp' className='underline decoration-black text-black'>create a new one</Link></h1>
+                <div className="flex flex-col gap-3">
+                    <label className="text-[#3D3D3D]" htmlFor="email">Enter Your Email or Phone</label>
+                    <input className="rounded-full px-3 py-2 w-full border border-gray-500/50" type="email" placeholder="michael.joe@example.com" required/>
+                </div>
+                <div className="flex flex-col gap-3 mt-6">
+                    <label className="text-[#3D3D3D]" htmlFor="password">Enter Your Password</label>
+                    <div className="relative">
+                        <input className="rounded-full px-3 py-2 w-full border border-gray-500/50" type={`${visible ?"text": "password"}`} placeholder="*****" required/>
+                        <FontAwesomeIcon onClick={() => setVisible(!visible)} className="absolute top-1/2 -translate-y-1/2 right-4 text-gray-600" icon={visible?faEye : faEyeSlash}/>
+                    </div>
+                </div>
+                <Link className=" rounded-full text-white bg-black flex justify-center items-center py-3 w-full mt-7 font-poppins hover:cursor-pointer active:bg-gray-800"> Login</Link>
+                <button className="w-full text-center mt-4 underline hover:cursor-pointer">Forgot your Password</button>
+            </form>
+            <aside className='w-full lg:w-1/2 h-full lg:rounded-e-2xl'>
+                <img className="w-full h-full lg:rounded-e-2xl object-center object-cover" src="https://png.pngtree.com/background/20241117/original/pngtree-sleek-and-functional-living-room-with-blue-accents-and-wooden-flooring-picture-image_11296592.jpg" alt="" />
+            </aside>
+        </div>
+    </main>
+  )
+}
+
+export default Login
