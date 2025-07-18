@@ -79,7 +79,7 @@ const Signup = () => {
               I have read and agreed to the Terms of Service and Privacy Policy
             </p>
           </span>
-          <button className="mt-5 bg-black text-white w-full py-3 rounded-full text-[16px] font-exo cursor-pointer ">
+          <button className=" rounded-full text-white bg-black flex justify-center items-center py-3 w-full mt-7 font-exo hover:cursor-pointer active:bg-gray-800">
             Create Account
           </button>
         </form>

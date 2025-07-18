@@ -4,3 +4,6 @@ export { default as Contact } from "./Main/Contact";
 export { default as Blog } from "./Main/Blog";
 export { default as SignUp } from "./Other/Signup";
 export { default as LogIn } from "./Other/Login";
+export { default as BlogDetail } from "./Main/BlogDetail";
+export { default as ProductDetail } from "./Main/ProductDetail";
+export { default as PrivacyPolicy } from "./Other/PrivatePolicyPage";

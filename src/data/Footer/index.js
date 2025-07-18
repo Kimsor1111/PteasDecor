@@ -66,16 +66,16 @@ export const FooterLi = [
   {
     title: "Useful Links",
     submenu: [
-      { name: "Home", path: "", icon: faHome },
-      { name: "Products", path: "", icon: faTag },
+      { name: "Home", path: "/", icon: faHome },
+      { name: "Products", path: "/Products", icon: faTag },
       {
         name: "Contact us",
-        path: "",
+        path: "/ContactUs",
         icon: faPhone,
       },
       {
         name: "Blog",
-        path: "",
+        path: "/Blog",
         icon: faBlog,
       },
     ],
@@ -83,20 +83,24 @@ export const FooterLi = [
   {
     title: "Privacy Policy",
     submenu: [
-      { name: "Refund & Return Policy", path: "", icon: faMoneyBill },
+      {
+        name: "Refund & Return Policy",
+        path: "/PrivacyPolicy/Refund_&_Return_Policy",
+        icon: faMoneyBill,
+      },
       {
         name: "Delivery & Shipping Policy",
-        path: "",
+        path: "/PrivacyPolicy/Delivery_&_Shipping_Policy",
         icon: faTruckArrowRight,
       },
       {
         name: "Terms & Conditions",
-        path: "",
+        path: "/PrivacyPolicy/Terms_&_Conditions",
         icon: faGear,
       },
       {
         name: "Terms of Service",
-        path: "",
+        path: "/PrivacyPolicy/Terms_of_Service",
         icon: faServicestack,
       },
     ],

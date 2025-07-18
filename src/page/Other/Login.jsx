@@ -41,20 +41,23 @@ const Login = () => {
               <input
                 className="rounded-full px-3 py-2 w-full border border-gray-500/50 text-sm"
                 type={`${visible ? "text" : "password"}`}
-                placeholder="*****"
+                placeholder="*******"
                 required
               />
               <FontAwesomeIcon
                 onClick={() => setVisible(!visible)}
-                className="absolute top-1/2 -translate-y-1/2 right-4 text-gray-600"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500/50 hover:text-black cursor-pointer"
                 icon={visible ? faEye : faEyeSlash}
               />
             </div>
           </div>
-          <Link className=" rounded-full text-white bg-black flex justify-center items-center py-3 w-full mt-7 font-poppins hover:cursor-pointer active:bg-gray-800">
+          <button
+            type="submit"
+            className=" rounded-full text-white bg-black flex justify-center items-center py-3 w-full mt-7 font-exo hover:cursor-pointer active:bg-gray-800"
+          >
             {" "}
             Login
-          </Link>
+          </button>
           <button className="w-full text-center mt-4 hover:underline hover:cursor-pointer">
             Forgot your Password
           </button>

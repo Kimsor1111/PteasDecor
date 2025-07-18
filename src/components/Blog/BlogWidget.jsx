@@ -1,6 +1,11 @@
+import { Link } from "react-router-dom";
+
 const BlogWidget = ({ img, title, des, profile, name, date }) => {
   return (
-    <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-10">
+    <Link
+      to={"/BlogDetail"}
+      className="w-full grid lg:grid-cols-2 grid-cols-1 gap-10"
+    >
       <img src={img} alt="" className="rounded-3xl" />
       <div className="flex flex-col items-center lg:items-baseline justify-center gap-5">
         <h1 className="lg:text-[20px] lg:text-start text-center text-xl font-bold text-[#404040]">
@@ -16,7 +21,7 @@ const BlogWidget = ({ img, title, des, profile, name, date }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

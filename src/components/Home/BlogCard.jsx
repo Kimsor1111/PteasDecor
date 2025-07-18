@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BlogCard = ({ img, profile, name, date, des }) => {
   return (
-    <div className="flex flex-col gap-3">
+    <Link to={"/BlogDetail"} className="flex flex-col gap-3">
       <img
         src={img}
         alt=""
@@ -15,7 +16,7 @@ const BlogCard = ({ img, profile, name, date, des }) => {
         </p>
       </div>
       <p className="text-[18px] text-[#404040] px-2">{des}</p>
-    </div>
+    </Link>
   );
 };
 
