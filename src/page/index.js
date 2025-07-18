@@ -1,6 +1,6 @@
 export { default as Home } from "./Main/Home";
 export { default as ProductPage } from "./Main/ProductPage";
-export { default as Contact } from "./Main/Contact";
+export { default as ContactUs } from "./Main/ContactUs";
 export { default as Blog } from "./Main/Blog";
 export { default as SignUp } from "./Other/Signup";
 export { default as LogIn } from "./Other/Login";

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   BigHero,
   ProductCard,
@@ -83,9 +84,12 @@ const Home = () => {
                 fringilla nunc in molestie feugiat.
               </p>
             </span>
-            <button className="text-white text-[15px] bg-[#282828] active:bg-gray-800 h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer">
+            <Link
+              to={"/Products"}
+              className="text-white text-[15px] bg-[#282828] active:bg-gray-800 h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer"
+            >
               View All <p className="font-poppins pt-[0.8px]">&gt;</p>
-            </button>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-10 lg:grid-cols-4">
             {PopularProductData.map(({ name, price, discount, img }, index) => (
@@ -125,9 +129,12 @@ const Home = () => {
                 elit, quis pulvina.
               </p>
             </span>
-            <button className="text-white text-[15px] bg-[#282828] active:bg-gray-800 text-nowrap h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer">
+            <Link
+              to={"/Blog"}
+              className="text-white text-[15px] bg-[#282828] active:bg-gray-800 text-nowrap h-fit flex gap-2 px-4 font-semibold  py-2 rounded-3xl cursor-pointer"
+            >
               Read All Blogs <p className="font-poppins pt-[0.8px]">&gt;</p>
-            </button>
+            </Link>
           </div>
           <div className="grid lg:grid-cols-3 lg:gap-5 gap-16 mt-8">
             {BlogData.map(({ img, profile, name, date, des }, index) => (

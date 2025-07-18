@@ -3,7 +3,7 @@ import { ErrorLayout, RootLayout } from "./layout";
 import {
   Home,
   ProductPage,
-  Contact,
+  ContactUs,
   Blog,
   SignUp,
   LogIn,
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "ContactUs",
-        element: <Contact />,
+        element: <ContactUs />,
       },
       {
         path: "Blog",
