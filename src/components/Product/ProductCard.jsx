@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ img, discount, price, name }) => {
   return (
-    <Link to={"/ProductDetail"} className="relative">
+    <Link to={"/Products/ProductDetail"} className="relative">
       {discount > 0 && (
         <span className="absolute top-2 left-3 bg-[#3D3D3D] text-[11px] text-white px-3 tracking-wider rounded-md py-[2px]">
           -{discount}%
