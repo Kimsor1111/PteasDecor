@@ -47,11 +47,11 @@ const Cart = () => {
     <main className="w-full h-full flex flex-col items-center gap-[100px] mt-[100px]">
       <div className="w-[95%] md:w-[90%] flex flex-col lg:flex-row gap-[30px] lg:gap-[50px]">
         <aside className="w-full lg:w-[60%] h-fit rounded-xl border border-gray-400 flex flex-col">
-          <div className="py-5 bg-[#20263E] rounded-t-[11px] grid grid-cols-[3fr_1fr_1fr_1fr] text-white text-[20px]">
-            <h1 className="ps-[40px]">Product</h1>
+          <div className="py-5 bg-[#20263E] rounded-t-[11px] grid grid-cols-[2fr_1fr_1fr_1fr] md:grid-cols-[3fr_1fr_1fr_1fr] gap-3 text-white text-[20px]">
+            <h1 className="ps-[20px] md:ps-[40px]">Product</h1>
             <h1 className="w-full text-center">Price</h1>
             <h1 className="w-full text-center">Quantity</h1>
-            <h1 className="w-full text-center">Total</h1>
+            <h1 className="w-full text-center pe-[20px]">Total</h1>
           </div>
           {carts.map(({ id, name, price, qty, imgsrc, discount }) => (
             <CartItem
