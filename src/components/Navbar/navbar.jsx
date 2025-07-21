@@ -76,9 +76,9 @@ const navbar = () => {
           >
             <FontAwesomeIcon icon={faUser} />
           </Link>
-          <span>
+          <Link to="/Cart">
             <FontAwesomeIcon className="cursor-pointer" icon={faShoppingBag} />
-          </span>
+          </Link>
           <span className="md:hidden" onClick={() => setMenuopen(true)}>
             <FontAwesomeIcon className="cursor-pointer" icon={faBars} />
           </span>
