@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProductItem } from "../../data/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,10 +14,12 @@ import {
   faStar,
   faTruckArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 const ProductDetail = () => {
+  const review = useRef(Math.round(Math.random() * 100) + 1);
   const { productid } = useParams();
-  const ProductDetail = ProductItem.find((item) => (item.id = productid));
+  const ProductDetail = ProductItem.find(
+    (item) => item.id == parseInt(productid)
+  );
   const [qty, setQty] = useState(1);
   const handleDecrease = () => {
     setQty(qty - 1 <= 0 ? 1 : parseInt(qty - 1));
@@ -103,7 +105,7 @@ const ProductDetail = () => {
                 <FontAwesomeIcon icon={faStarRegular} />
               </span>
               <p className="md:text-md text-[#414141] text-sm">
-                ({Math.round(Math.random() * 100)} review)
+                ({review.current} review)
               </p>
             </div>
             <hr className="border-[#DDDDDD] my-3" />
