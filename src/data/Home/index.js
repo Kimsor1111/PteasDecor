@@ -19,24 +19,28 @@ export const BigHeroData = {
 
 export const FeatureProductData = [
   {
+    id: 1,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,
     img: P1,
   },
   {
+    id: 2,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 0,
     img: P1,
   },
   {
+    id: 3,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,
     img: P1,
   },
   {
+    id: 4,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,
@@ -61,48 +65,56 @@ export const CategoryData = [
 
 export const PopularProductData = [
   {
+    id: 1,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,
     img: P1,
   },
   {
+    id: 2,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 0,
     img: P1,
   },
   {
+    id: 3,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,
     img: P1,
   },
   {
+    id: 4,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,
     img: P1,
   },
   {
+    id: 5,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,
     img: P1,
   },
   {
+    id: 6,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 0,
     img: P1,
   },
   {
+    id: 7,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,
     img: P1,
   },
   {
+    id: 8,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 25,

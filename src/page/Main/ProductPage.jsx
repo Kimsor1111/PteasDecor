@@ -135,9 +135,10 @@ const ProductPage = () => {
             </span>
           </div>
           <div className="grid grid-cols-2 justify-center md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-[30px] space-y-5 mx-10 lg:mx-0">
-            {product.map(({ name, price, discount, img }, index) => (
+            {product.map(({ id, name, price, discount, img }, index) => (
               <ProductCard
                 key={index}
+                id={id}
                 name={name}
                 price={price}
                 discount={discount}

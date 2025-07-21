@@ -40,15 +40,18 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-10 lg:grid-cols-4">
-            {FeatureProductData.map(({ name, price, discount, img }, index) => (
-              <ProductCard
-                key={index}
-                name={name}
-                price={price}
-                discount={discount}
-                img={img}
-              />
-            ))}
+            {FeatureProductData.map(
+              ({ id, name, price, discount, img }, index) => (
+                <ProductCard
+                  key={index}
+                  id={id}
+                  name={name}
+                  price={price}
+                  discount={discount}
+                  img={img}
+                />
+              )
+            )}
           </div>
         </div>
       </section>
@@ -92,15 +95,18 @@ const Home = () => {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-10 lg:grid-cols-4">
-            {PopularProductData.map(({ name, price, discount, img }, index) => (
-              <ProductCard
-                key={index}
-                name={name}
-                price={price}
-                discount={discount}
-                img={img}
-              />
-            ))}
+            {PopularProductData.map(
+              ({ id, name, price, discount, img }, index) => (
+                <ProductCard
+                  key={index}
+                  id={id}
+                  name={name}
+                  price={price}
+                  discount={discount}
+                  img={img}
+                />
+              )
+            )}
           </div>
         </div>
       </section>
