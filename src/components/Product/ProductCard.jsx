@@ -20,10 +20,10 @@ const ProductCard = ({ id, img, discount, price, name }) => {
             <p>
               {discount > 0 && (
                 <del className="mr-1 text-[#404040]">
-                  ${(price - (price * discount) / 100).toFixed(2)}
+                  ${price}
                 </del>
               )}
-              ${price}
+              ${(price - (price * discount) / 100).toFixed(2)}
             </p>
           </span>
           <span className="rounded-full border-[1px] border-black w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center pb-[3.5px] pr-[0.3px] cursor-pointer">

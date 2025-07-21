@@ -10,6 +10,7 @@ import {
   BlogDetail,
   ProductDetail,
   PrivacyPolicy,
+  Cart,
 } from "./page";
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/PrivacyPolicy/:privacypolicy",
         element: <PrivacyPolicy />,
+      },
+      {
+        path: "Cart",
+        element: <Cart />,
       },
     ],
   },
