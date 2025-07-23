@@ -24,7 +24,7 @@ const Payment = () => {
   const [CardNum, setCardNum] = useState("");
   const [CVV, setCVV] = useState("");
   const [isExpiryValid, setIsExpiryValid] = useState(false);
-  const [failed, setFailed] = useState(false);
+  const [failed, setFailed] = useState(true);
   const [success, setSuccess] = useState(false);
   const handleExpiryValid = (isValid) => {
     setIsExpiryValid(isValid);
@@ -54,15 +54,15 @@ const Payment = () => {
   return (
     <main className="w-full h-full flex flex-col items-center gap-[100px] mt-[100px]">
       <div className="w-[95%] md:w-[90%] flex flex-col lg:flex-row gap-[30px] lg:gap-[50px]">
-        <aside className="w-full lg:w-[60%] h-fit rounded-xl border border-gray-400 flex flex-col pb-5">
-          <div className="py-5 bg-[#20263E] rounded-t-[11px] grid grid-cols-3 gap-3 text-white text-[18px] md:text-[20px]">
+        <aside className="w-full lg:w-[60%] h-fit rounded-xl flex flex-col pb-5">
+          <div className="py-5 bg-[#20263E] rounded-t-[11px] grid grid-cols-3 gap-3 font-poppins font-semibold text-white text-[18px] md:text-[20px]">
             <h1 className="w-full text-center">Personal</h1>
             <h1 className="w-full text-center">Billing</h1>
             <h1 className="w-full text-center">Confirmation</h1>
           </div>
           <form
             onSubmit={handleSubmit}
-            className="px-4 py-4 flex flex-col gap-5"
+            className="flex flex-col gap-5 px-4 py-4 border-2 border-[#DEDFE1] rounded-b-[11px]"
             action="#"
           >
             <InputForm
@@ -99,7 +99,7 @@ const Payment = () => {
             </div>
             <button
               type="submit"
-              className="text-white bg-black hover:bg-black/90 active:bg-black/80 rounded-full py-3 px-4 w-fit mt-2 font-exo hover:cursor-pointer"
+              className="px-4 py-3 mt-2 text-white bg-black rounded-full hover:bg-black/90 active:bg-black/80 w-fit font-exo hover:cursor-pointer"
             >
               Proceed to Next Step
             </button>
@@ -111,13 +111,13 @@ const Payment = () => {
       </div>
       {success && (
         <>
-          <div className="w-screen h-screen bg-black/50 fixed top-0 left-0 z-10"></div>
-          <SuccessPayment />
+          <div className="fixed top-0 left-0 z-10 w-screen h-screen bg-black/50"></div>
+          <SuccessPayment setSuccess={setSuccess} />
         </>
       )}
       {failed && (
         <>
-          <div className="w-screen h-screen bg-black/50 fixed top-0 left-0 z-10"></div>
+          <div className="fixed top-0 left-0 z-10 w-screen h-screen bg-black/50"></div>
           <FailedPayment setFailed={setFailed} />
         </>
       )}

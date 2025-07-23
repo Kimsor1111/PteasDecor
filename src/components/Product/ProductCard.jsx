@@ -15,13 +15,11 @@ const ProductCard = ({ id, img, discount, price, name }) => {
         <h1 className="md:text-[18px] text-[14px] text-[#404040] w-full md:text-center">
           {name}
         </h1>
-        <div className="flex justify-between items-center gap-2">
+        <div className="flex items-center justify-between gap-2">
           <span className="md:text-sm text-[13px]">
             <p>
               {discount > 0 && (
-                <del className="mr-1 text-[#404040]">
-                  ${price}
-                </del>
+                <del className="mr-1 text-[#404040]">${price.toFixed(2)}</del>
               )}
               ${(price - (price * discount) / 100).toFixed(2)}
             </p>
