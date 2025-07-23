@@ -4,7 +4,7 @@ import { ProductItem } from "../../data/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProductCard } from "../../components";
 import { FeatureProductData } from "../../data/Home";
-import Profile from "./../../assets/Blog/profile4.jpg";
+import Profile from "./../../assets/Blog/Profile4.jpg";
 import {
   faHeart,
   faStarHalfStroke,
