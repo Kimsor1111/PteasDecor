@@ -8,7 +8,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const OrderEntry = ({ status }) => {
   return (
-    <div className="w-full grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] items-center md:grid-cols-[1fr_2fr_1fr_1fr_1fr_1fr] gap-3 py-7 border-2 border-t-0 border-[#CECECE]">
+    <div
+      className={`w-full grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] items-center md:grid-cols-[1fr_2fr_1fr_1fr_1fr_1fr] gap-3 ${
+        status == "Failed" && "rounded-b-xl"
+      } py-7 border-2 border-t-0 border-[#CECECE]`}
+    >
       <p className="ps-[10px] md:ps-[20px] font-bold text-[#6A6A6A]">2103</p>
       <div className="flex items-center gap-2">
         <img src={Product} className="md:size-[70px] size-[40px]" alt="" />
