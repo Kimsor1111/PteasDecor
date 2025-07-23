@@ -1,6 +1,6 @@
 import { CartItem, ProductCard } from "../../components";
 import img from "./../../assets/Product/p1.jpg";
-
+import { Link } from "react-router-dom";
 const Cart = () => {
   const carts = [
     {
@@ -78,10 +78,9 @@ const Cart = () => {
           <div className="flex justify-between px-5 md:px-[40px] lg:px-5 py-5 border-t border-gray-300 text-[18px]">
             <h1>TOTAL</h1>${sum - (sum * coupon) / 100}
           </div>
-          <button className="py-5 bg-black rounded-b-[11px] text-white text-center text-[18px] hover:cursor-pointer hover:bg-black/90 active:bg-black/80">
-            {" "}
+          <Link to={'/Checkout'} className="py-5 bg-black rounded-b-[11px] text-white text-center text-[18px] hover:cursor-pointer hover:bg-black/90 active:bg-black/80">
             Proceed to Check Out
-          </button>
+          </Link>
         </aside>
       </div>
       <div className="w-[95%] md:w-[90%]">

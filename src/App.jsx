@@ -11,6 +11,8 @@ import {
   ProductDetail,
   PrivacyPolicy,
   Cart,
+  Checkout,
+  Payment,
 } from "./page";
 const router = createBrowserRouter([
   {
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
       {
         path: "Cart",
         element: <Cart />,
+      },
+      {
+        path: "Checkout",
+        element: <Checkout />,
+      },
+      {
+        path: "Checkout/Payment",
+        element: <Payment />,
       },
     ],
   },

@@ -9,3 +9,8 @@ export { default as QuestionDropDown } from "./Home/QuestionDropDown";
 export { default as BlogWidget } from "./Blog/BlogWidget";
 export { default as Checkbox } from "./Product/Checkbox";
 export { default as CartItem } from "./Cart/CartItem";
+export { default as CartDetails } from "./Cart/CartDetails";
+export { default as InputForm } from "./Cart/InputForm";
+export { default as CartDetailsItem } from "./Cart/CartDetailsItem";
+export { default as SuccessPayment } from "./Cart/SuccessPayment";
+export { default as FailedPayment } from "./Cart/FailedPayment";

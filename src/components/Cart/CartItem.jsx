@@ -23,7 +23,7 @@ const CartItem = ({ name, price, qty, imgsrc, discount }) => {
         ${finalPrice}
       </h1>
       <div className="flex items-center justify-center w-full">
-        <h1 className="w-[95%] md:w-[80%] lg:w-[90%] xl:w-[80%] rounded-full border border-gray-500 py-1 md:py-2 flex justify-center items-center gap-1 md:gap-4 lg:gap-2 xl:gap-3 text-[13px] md:text-[15px]">
+        <h1 className="w-full md:w-[80%] lg:w-[90%] xl:w-[80%] rounded-full border border-gray-500 py-1 md:py-2 flex justify-center items-center gap-[6px] md:gap-4 lg:gap-2 xl:gap-3 text-[13px] md:text-[15px]">
           <FontAwesomeIcon className="hover:cursor-pointer" icon={faMinus} />
           {qty}
           <FontAwesomeIcon className="hover:cursor-pointer" icon={faPlus} />
