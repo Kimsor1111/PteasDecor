@@ -9,3 +9,6 @@ export { default as QuestionDropDown } from "./Home/QuestionDropDown";
 export { default as BlogWidget } from "./Blog/BlogWidget";
 export { default as Checkbox } from "./Product/Checkbox";
 export { default as CartItem } from "./Cart/CartItem";
+export { default as OrderEntry } from "./UserDashboard/OrderEntry";
+export { default as PaymentMethod } from "./UserDashboard/PaymentMethod";
+export { default as TrackOrder } from "./UserDashboard/TrackOrder";

@@ -8,3 +8,4 @@ export { default as BlogDetail } from "./Main/BlogDetail";
 export { default as ProductDetail } from "./Main/ProductDetail";
 export { default as PrivacyPolicy } from "./Other/PrivatePolicyPage";
 export { default as Cart } from "./Other/Cart";
+export { default as MyAccount } from "./UserDashboard/MyAccount";

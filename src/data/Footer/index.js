@@ -19,7 +19,7 @@ import visa from "./../../assets/Payment/visa.jpg";
 import master from "./../../assets/Payment/master.jpg";
 import paypal from "./../../assets/Payment/paypal.jpg";
 import american from "./../../assets/Payment/americanExpress.jpg";
-import { SocialIcon } from "../Navbar";
+import { SocialIcon } from "./../Navbar";
 export const FooterLi = [
   {
     title: "Contact Information",
@@ -40,7 +40,7 @@ export const FooterLi = [
   {
     title: "Quick Links",
     submenu: [
-      { name: "My Account", path: "", icon: faUser },
+      { name: "My Account", path: "/MyAccount", icon: faUser },
       {
         name: "Cart",
         path: "",
