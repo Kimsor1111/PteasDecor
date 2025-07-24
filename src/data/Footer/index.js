@@ -43,7 +43,7 @@ export const FooterLi = [
       { name: "My Account", path: "/MyAccount", icon: faUser },
       {
         name: "Cart",
-        path: "",
+        path: "/Cart",
         icon: faShoppingBag,
       },
       {
@@ -58,7 +58,7 @@ export const FooterLi = [
       },
       {
         name: "Location",
-        path: "",
+        path: "https://www.google.com/maps/",
         icon: faLocationDot,
       },
     ],
