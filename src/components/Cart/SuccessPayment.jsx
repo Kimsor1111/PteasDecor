@@ -21,12 +21,13 @@ const SuccessPayment = ({ setSuccess }) => {
         >
           Go to Homepage
         </Link>
-        <button
+        <Link
+          to='/MyAccount'
           onClick={() => setSuccess(false)}
           className="px-5 py-2 font-semibold border border-black rounded-full hover:bg-gray-100 active:bg-gray-200 font-exo"
         >
           Check Order Details
-        </button>
+        </Link>
       </div>
     </div>
   );

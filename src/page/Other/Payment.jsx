@@ -24,7 +24,7 @@ const Payment = () => {
   const [CardNum, setCardNum] = useState("");
   const [CVV, setCVV] = useState("");
   const [isExpiryValid, setIsExpiryValid] = useState(false);
-  const [failed, setFailed] = useState(true);
+  const [failed, setFailed] = useState(false);
   const [success, setSuccess] = useState(false);
   const handleExpiryValid = (isValid) => {
     setIsExpiryValid(isValid);
