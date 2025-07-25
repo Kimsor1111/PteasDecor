@@ -21,9 +21,6 @@ export { default as InputForm } from "./Cart/InputForm";
 export { default as CartDetailsItem } from "./Cart/CartDetailsItem";
 export { default as SuccessPayment } from "./Cart/SuccessPayment";
 export { default as FailedPayment } from "./Cart/FailedPayment";
-<<<<<<< HEAD
 export { default as List } from "./UserDashboard/List";
-=======
 export { default as PaymentCard } from "./UserDashboard/PaymentCard";
 export { default as WishlistEntry } from "./UserDashboard/WishlistEntry";
->>>>>>> f0ff5c89426668d4a9a00b7b0fcbc4d4e15b3eb2

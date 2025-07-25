@@ -11,10 +11,7 @@ export { default as Cart } from "./Other/Cart";
 export { default as MyAccount } from "./UserDashboard/MyAccount";
 export { default as Checkout } from "./Other/Checkout";
 export { default as Payment } from "./Other/Payment";
-<<<<<<< HEAD
 export { default as TrackOrder } from "./UserDashboard/TrackOrder";
 export { default as TrackOrderDetail } from "./UserDashboard/TrackOrderDetail";
-=======
 export { default as PaymentMethodPage } from "./UserDashboard/PaymentMethodPage";
 export { default as Wishlist } from "./UserDashboard/Wishlist";
->>>>>>> f0ff5c89426668d4a9a00b7b0fcbc4d4e15b3eb2
