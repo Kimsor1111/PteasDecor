@@ -16,7 +16,6 @@ export { default as ProductCard } from "./Product/ProductCard";
 export { default as OrderEntry } from "./UserDashboard/OrderEntry";
 export { default as PaymentMethod } from "./UserDashboard/PaymentMethod";
 export { default as CartDetails } from "./Cart/CartDetails";
-export { default as InputForm } from "./Cart/InputForm";
 export { default as CartDetailsItem } from "./Cart/CartDetailsItem";
 export { default as SuccessPayment } from "./Cart/SuccessPayment";
 export { default as FailedPayment } from "./Cart/FailedPayment";
