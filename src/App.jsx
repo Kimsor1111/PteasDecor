@@ -14,8 +14,13 @@ import {
   MyAccount,
   Checkout,
   Payment,
+<<<<<<< HEAD
   TrackOrder,
   TrackOrderDetail,
+=======
+  PaymentMethodPage,
+  Wishlist,
+>>>>>>> f0ff5c89426668d4a9a00b7b0fcbc4d4e15b3eb2
 } from "./page";
 const router = createBrowserRouter([
   {
@@ -71,12 +76,19 @@ const router = createBrowserRouter([
         element: <Payment />,
       },
       {
+<<<<<<< HEAD
         path: "MyAccount/TrackOrder",
         element: <TrackOrder />,
       },
       {
         path: "MyAccount/TrackOrder/TrackOrderDetail",
         element: <TrackOrderDetail />,
+=======
+        path: "/MyAccount/PaymentAndBilling",
+        element: <PaymentMethodPage />,
+        path: "/MyAccount/Wishlist",
+        element: <Wishlist />,
+>>>>>>> f0ff5c89426668d4a9a00b7b0fcbc4d4e15b3eb2
       },
     ],
   },

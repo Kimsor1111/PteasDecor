@@ -1,14 +1,19 @@
-export { default as Navbar } from "./Navbar/navbar";
+export { default as BlogWidget } from "./Blog/BlogWidget";
+export { default as CartDetails } from "./Cart/CartDetails";
+export { default as CartDetailsItem } from "./Cart/CartDetailsItem";
+export { default as CartItem } from "./Cart/CartItem";
+export { default as FailedPayment } from "./Cart/FailedPayment";
+export { default as InputForm } from "./Cart/InputForm";
+export { default as SuccessPayment } from "./Cart/SuccessPayment";
 export { default as Footer } from "./Footer/footer";
-export { default as ProductCard } from "./Product/ProductCard";
 export { default as BigHero } from "./Home/BigHeroSection";
+export { default as BlogCard } from "./Home/BlogCard";
 export { default as CategoryCard } from "./Home/CategoryCard";
 export { default as CustomerReview } from "./Home/CustomerRating";
-export { default as BlogCard } from "./Home/BlogCard";
 export { default as QuestionDropDown } from "./Home/QuestionDropDown";
-export { default as BlogWidget } from "./Blog/BlogWidget";
+export { default as Navbar } from "./Navbar/navbar";
 export { default as Checkbox } from "./Product/Checkbox";
-export { default as CartItem } from "./Cart/CartItem";
+export { default as ProductCard } from "./Product/ProductCard";
 export { default as OrderEntry } from "./UserDashboard/OrderEntry";
 export { default as PaymentMethod } from "./UserDashboard/PaymentMethod";
 export { default as CartDetails } from "./Cart/CartDetails";
@@ -16,4 +21,9 @@ export { default as InputForm } from "./Cart/InputForm";
 export { default as CartDetailsItem } from "./Cart/CartDetailsItem";
 export { default as SuccessPayment } from "./Cart/SuccessPayment";
 export { default as FailedPayment } from "./Cart/FailedPayment";
+<<<<<<< HEAD
 export { default as List } from "./UserDashboard/List";
+=======
+export { default as PaymentCard } from "./UserDashboard/PaymentCard";
+export { default as WishlistEntry } from "./UserDashboard/WishlistEntry";
+>>>>>>> f0ff5c89426668d4a9a00b7b0fcbc4d4e15b3eb2
