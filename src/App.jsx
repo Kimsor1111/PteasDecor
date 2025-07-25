@@ -14,7 +14,11 @@ import {
   MyAccount,
   Checkout,
   Payment,
+<<<<<<< HEAD
   PaymentMethodPage,
+=======
+  Wishlist,
+>>>>>>> 4aa61fe305f8e1b1b3fdcb5e8f1a0673a5db3c41
 } from "./page";
 const router = createBrowserRouter([
   {
@@ -72,6 +76,8 @@ const router = createBrowserRouter([
       {
         path: "/MyAccount/PaymentAndBilling",
         element: <PaymentMethodPage />,
+        path: "/MyAccount/Wishlist",
+        element: <Wishlist />,
       },
     ],
   },

@@ -48,7 +48,7 @@ export const FooterLi = [
       },
       {
         name: "Wishlist",
-        path: "",
+        path: "/MyAccount/Wishlist",
         icon: faHeart,
       },
       {

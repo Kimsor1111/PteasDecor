@@ -12,3 +12,4 @@ export { default as MyAccount } from "./UserDashboard/MyAccount";
 export { default as Checkout } from "./Other/Checkout";
 export { default as Payment } from "./Other/Payment";
 export { default as PaymentMethodPage } from "./UserDashboard/PaymentMethodPage";
+export { default as Wishlist } from "./UserDashboard/Wishlist";
