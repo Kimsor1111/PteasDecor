@@ -1,5 +1,4 @@
 export { default as BlogWidget } from "./Blog/BlogWidget";
-export { default as CartDetails } from "./Cart/CartDetails";
 export { default as CartDetailsItem } from "./Cart/CartDetailsItem";
 export { default as CartItem } from "./Cart/CartItem";
 export { default as FailedPayment } from "./Cart/FailedPayment";
