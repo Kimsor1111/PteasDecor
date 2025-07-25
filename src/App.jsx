@@ -14,6 +14,8 @@ import {
   MyAccount,
   Checkout,
   Payment,
+  TrackOrder,
+  TrackOrderDetail,
 } from "./page";
 const router = createBrowserRouter([
   {
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
         element: <ProductPage />,
       },
       {
-        path: "/Products/ProductDetail/:productid",
+        path: "Products/ProductDetail/:productid",
         element: <ProductDetail />,
       },
       {
@@ -52,14 +54,14 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: "/PrivacyPolicy/:privacypolicy",
+        path: "PrivacyPolicy/:privacypolicy",
         element: <PrivacyPolicy />,
       },
       {
         path: "Cart",
         element: <Cart />,
       },
-      { path: "/MyAccount", element: <MyAccount /> },
+      { path: "MyAccount", element: <MyAccount /> },
       {
         path: "Checkout",
         element: <Checkout />,
@@ -67,6 +69,14 @@ const router = createBrowserRouter([
       {
         path: "Checkout/Payment",
         element: <Payment />,
+      },
+      {
+        path: "MyAccount/TrackOrder",
+        element: <TrackOrder />,
+      },
+      {
+        path: "MyAccount/TrackOrder/TrackOrderDetail",
+        element: <TrackOrderDetail />,
       },
     ],
   },

@@ -53,7 +53,7 @@ export const FooterLi = [
       },
       {
         name: "Track My Order",
-        path: "",
+        path: "/MyAccount/TrackOrder",
         icon: faTruck,
       },
       {

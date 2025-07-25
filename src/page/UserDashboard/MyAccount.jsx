@@ -1,10 +1,8 @@
-import { OrderEntry, PaymentMethod, TrackOrder } from "../../components";
-import { useState, useEffect } from "react";
+import { OrderEntry, PaymentMethod } from "../../components";
 import Visa from "./../../assets/Payment/visa.jpg";
 import Master from "./../../assets/Payment/master.jpg";
 import { Link } from "react-router-dom";
 const MyAccount = () => {
-  const [track, setTrack] = useState(false);
   const payment = [
     {
       name: "MasterCard (Default)",
@@ -17,20 +15,9 @@ const MyAccount = () => {
       number: "2736 3286 8332 2138",
     },
   ];
-  useEffect(() => {
-    if (track) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [track]);
   return (
     <>
       <main className="flex flex-col items-center justify-center w-full mt-10 font-oxygen">
-        {track && <TrackOrder close={() => setTrack(false)} />}
         <h1 className="w-[95%] text-[30px] font-bold text-[#2D2D2D]">
           Account Overview
         </h1>
@@ -44,10 +31,7 @@ const MyAccount = () => {
             <h1 className="text-[20px] font-bold text-[#2d2d2d]">
               Order History
             </h1>
-            <p
-              className="hover:underline text-[16px] text-[#575757] cursor-pointer"
-              onClick={() => setTrack(true)}
-            >
+            <p className="hover:underline text-[16px] text-[#575757] cursor-pointer">
               Track An Order
             </p>
           </div>
