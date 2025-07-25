@@ -14,6 +14,7 @@ import {
   MyAccount,
   Checkout,
   Payment,
+  PaymentMethodPage,
 } from "./page";
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "Checkout/Payment",
         element: <Payment />,
+      },
+      {
+        path: "/MyAccount/PaymentAndBilling",
+        element: <PaymentMethodPage />,
       },
     ],
   },

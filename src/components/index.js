@@ -17,3 +17,4 @@ export { default as InputForm } from "./Cart/InputForm";
 export { default as CartDetailsItem } from "./Cart/CartDetailsItem";
 export { default as SuccessPayment } from "./Cart/SuccessPayment";
 export { default as FailedPayment } from "./Cart/FailedPayment";
+export { default as PaymentCard } from "./UserDashboard/PaymentCard";
