@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
 import { Navbar, Footer } from "../components";
+import { Error } from "../page";
 import { useLocation } from "react-router-dom";
 const errorLayout = () => {
   const location = useLocation();
@@ -10,7 +10,7 @@ const errorLayout = () => {
   return (
     <>
       <Navbar />
-      <h1>This is Error</h1>
+      <Error />
       <Footer />
     </>
   );

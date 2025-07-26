@@ -15,3 +15,4 @@ export { default as TrackOrder } from "./UserDashboard/TrackOrder";
 export { default as TrackOrderDetail } from "./UserDashboard/TrackOrderDetail";
 export { default as PaymentMethodPage } from "./UserDashboard/PaymentMethodPage";
 export { default as Wishlist } from "./UserDashboard/Wishlist";
+export { default as Error } from "./Main/Error";
