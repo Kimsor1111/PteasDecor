@@ -74,14 +74,15 @@ const footer = () => {
                 {title}
               </h1>
               <div className="w-[200px] flex justify-between pr-3 gap-5 mt-3">
-                {icon.map((item, index) => (
+                {icon.map(({ icon, path }, index) => (
                   <Link
                     key={index}
+                    to={path}
                     className="flex items-center gap-2 font-medium font-poppins text-white/50 hover:text-white"
                   >
                     <FontAwesomeIcon
                       className="w-[35px] py-2.5 bg-gray-200/20 rounded"
-                      icon={item}
+                      icon={icon}
                     />
                   </Link>
                 ))}

@@ -16,6 +16,6 @@ export { default as ProductCard } from "./Product/ProductCard";
 export { default as OrderEntry } from "./UserDashboard/OrderEntry";
 export { default as PaymentMethod } from "./UserDashboard/PaymentMethod";
 export { default as CartDetails } from "./Cart/CartDetails";
-export { default as List } from "./UserDashboard/List";
+export { default as ItemEntry } from "./UserDashboard/ItemEntry";
 export { default as PaymentCard } from "./UserDashboard/PaymentCard";
 export { default as WishlistEntry } from "./UserDashboard/WishlistEntry";

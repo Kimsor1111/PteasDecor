@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +7,7 @@ import {
   faTruck,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { List } from "./../../components";
+import { ItemEntry } from "./../../components";
 import p from "./../../assets/Product/p1.jpg";
 const TrackingOrderDetail = () => {
   const Cart = [
@@ -150,7 +149,7 @@ const TrackingOrderDetail = () => {
           <h1 className="text-sm font-medium">Item ({Cart.length})</h1>
           <div className="mt-2">
             {Cart.map(({ img, name, price, discount, qty }, index) => (
-              <List
+              <ItemEntry
                 length={Cart.length}
                 key={index}
                 index={index}
@@ -196,10 +195,30 @@ const TrackingOrderDetail = () => {
             </li>
             <li>
               <h1 className="text-xl  font-semibold mb-3">Quick Link</h1>
-              <p className="text-[12px] text-[#505157] mt-1">
+              <Link
+                to={"/PrivacyPolicy/Refund_&_Return_Policy"}
+                className="block text-[12px] text-[#505157] mt-1"
+              >
+                Refund & Return Policy
+              </Link>
+              <Link
+                to={"/PrivacyPolicy/Delivery_&_Shipping_Policy"}
+                className="block text-[12px] text-[#505157] mt-1"
+              >
+                Delivery & Shipping Policy
+              </Link>
+              <Link
+                to={"/PrivacyPolicy/Terms_&_Conditions"}
+                className="block text-[12px] text-[#505157] mt-1"
+              >
                 Terms & Conditions
-              </p>
-              <p className="text-[12px] text-[#505157] mt-1">Return Policy</p>
+              </Link>
+              <Link
+                to={"/PrivacyPolicy/Terms_of_Service"}
+                className="block text-[12px] text-[#505157] mt-1"
+              >
+                Terms of Service
+              </Link>
             </li>
           </ul>
         </div>

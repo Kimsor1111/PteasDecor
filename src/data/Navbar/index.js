@@ -24,8 +24,20 @@ export const MenuLi = [
   },
 ];
 export const SocialIcon = [
-  faFacebookF,
-  faTelegramPlane,
-  faYoutube,
-  faInstagram,
+  {
+    icon: faFacebookF,
+    path: "https://www.facebook.com/",
+  },
+  {
+    icon: faTelegramPlane,
+    path: "https://web.telegram.org/",
+  },
+  {
+    icon: faYoutube,
+    path: "https://www.youtube.com/",
+  },
+  {
+    icon: faInstagram,
+    path: "https://www.instagram.com/",
+  },
 ];

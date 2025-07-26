@@ -1,5 +1,27 @@
 import { WishlistEntry } from "../../components";
-const MyAccount = () => {
+import p from "./../../assets/Product/p1.jpg";
+import { useState } from "react";
+const Wishlist = () => {
+  const wishlistproduct = [
+    {
+      img: p,
+      name: "Double Bed & Dressing",
+      price: 123.45,
+      stock: 10,
+    },
+    {
+      img: p,
+      name: "Double Bed & Dressing",
+      price: 123.45,
+      stock: 10,
+    },
+    {
+      img: p,
+      name: "Double Bed & Dressing",
+      price: 123.45,
+      stock: 10,
+    },
+  ];
   return (
     <>
       <main className="flex flex-col items-center justify-center w-full mt-10 font-oxygen">
@@ -23,9 +45,15 @@ const MyAccount = () => {
             <h1 className="w-full text-center">Add To Cart</h1>
           </div>
           <div className="md:text-[16px] text-[11px]">
-            <WishlistEntry status={"In Progress"} />
-            <WishlistEntry status={"Succeed"} />
-            <WishlistEntry status={"Failed"} />
+            {wishlistproduct.map(({ img, name, price, stock }, index) => (
+              <WishlistEntry
+                key={index}
+                img={img}
+                name={name}
+                price={price}
+                stock={stock}
+              />
+            ))}
           </div>
         </section>
       </main>
@@ -33,4 +61,4 @@ const MyAccount = () => {
   );
 };
 
-export default MyAccount;
+export default Wishlist;

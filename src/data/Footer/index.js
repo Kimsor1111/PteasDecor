@@ -5,7 +5,6 @@ import {
   faGear,
   faHeart,
   faHome,
-  faHouseUser,
   faLocationDot,
   faMoneyBill,
   faPhone,

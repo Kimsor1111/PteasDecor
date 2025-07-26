@@ -44,8 +44,8 @@ const navbar = () => {
           ))}
         </ul>
         <div className="w-full h-[100px] flex items-center justify-center gap-5 text-2xl text-black/50 border-t-2 border-black/30">
-          {SocialIcon.map((icon, index) => (
-            <Link key={index} className="hover:text-black">
+          {SocialIcon.map(({ icon, path }, index) => (
+            <Link key={index} to={path} className="hover:text-black">
               <FontAwesomeIcon icon={icon} />
             </Link>
           ))}
