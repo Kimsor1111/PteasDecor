@@ -10,6 +10,7 @@ const Blog = () => {
           Our Feature Posts
         </h1>
         <BlogWidget
+          id={BlogWidgetData.id}
           img={BlogWidgetData.img}
           title={BlogWidgetData.title}
           des={BlogWidgetData.des}
@@ -19,9 +20,10 @@ const Blog = () => {
         />
       </section>
       <section className="w-[95%] grid lg:grid-cols-3 lg:gap-5 gap-12 mt-10">
-        {BlogData1.map(({ img, profile, name, date, des }, index) => (
+        {BlogData1.map(({ id, img, profile, name, date, des }, index) => (
           <BlogCard
             key={index}
+            id={id}
             img={img}
             profile={profile}
             name={name}
@@ -35,9 +37,10 @@ const Blog = () => {
           Latest Posts
         </h1>
         <div className="w-full grid lg:grid-cols-3 lg:gap-x-5 lg:gap-y-16 gap-12">
-          {blogdata2.map(({ img, profile, name, date, des }, index) => (
+          {blogdata2.map(({ id, img, profile, name, date, des }, index) => (
             <BlogCard
               key={index}
+              id={id}
               img={img}
               profile={profile}
               name={name}

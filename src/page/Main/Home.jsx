@@ -48,7 +48,7 @@ const Home = () => {
                   name={name}
                   price={price}
                   discount={discount}
-                  img={img}
+                  img={img[0]}
                 />
               )
             )}
@@ -143,9 +143,10 @@ const Home = () => {
             </Link>
           </div>
           <div className="grid lg:grid-cols-3 lg:gap-5 gap-16 mt-8">
-            {BlogData.map(({ img, profile, name, date, des }, index) => (
+            {BlogData.map(({ id, img, profile, name, date, des }, index) => (
               <BlogCard
                 key={index}
+                id={id}
                 img={img}
                 profile={profile}
                 name={name}

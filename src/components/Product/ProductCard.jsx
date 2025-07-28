@@ -9,7 +9,7 @@ const ProductCard = ({ id, img, discount, price, name }) => {
         </span>
       )}
       <div className="bg-[#E8E8E8] rounded-2xl">
-        <img src={img} alt="" className="mb-2 rounded-2xl" />
+        <img src={img} alt="" className=" mb-2 rounded-2xl" />
       </div>
       <div className="flex flex-col justify-center gap-2 px-2 my-5">
         <h1 className="md:text-[18px] text-[14px] text-[#404040] w-full md:text-center">
@@ -24,7 +24,13 @@ const ProductCard = ({ id, img, discount, price, name }) => {
               ${(price - (price * discount) / 100).toFixed(2)}
             </p>
           </span>
-          <span className="rounded-full border-[1px] border-black w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center pb-[3.5px] pr-[0.3px] cursor-pointer">
+          <span
+            onClick={(e) => {
+              e.preventDefault();
+              console.log("add to cart");
+            }}
+            className="rounded-full border-[1px] border-black w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center pb-[3.5px] pr-[0.3px] cursor-pointer"
+          >
             +
           </span>
         </div>

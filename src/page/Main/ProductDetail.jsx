@@ -1,60 +1,36 @@
-import { useRef, useState } from "react";
-import { useParams } from "react-router-dom";
-import { ProductItem } from "../../data/Product";
+import { useRef, useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { ProductItem, reviewUser } from "../../data/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProductCard } from "../../components";
 import { FeatureProductData } from "../../data/Home";
-import Profile from "./../../assets/Blog/Profile4.jpg";
+
+import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import {
   faHeart,
-  faStarHalfStroke,
-  faStar as faStarRegular,
-} from "@fortawesome/free-regular-svg-icons";
-import {
   faParachuteBox,
   faStar,
   faTruckArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 const ProductDetail = () => {
   const { productid } = useParams();
-  const ProductDetail = ProductItem.find(
-    (item) => item.id == parseInt(productid)
-  );
-  const reviewUser = [
-    {
-      img: Profile,
-      name: "Mike Johnson",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque, lorem vel vulputate vitae aliquam. Pretium tristique nisi, ut commodo fames. Porttitor et sagittis egestas vitae metus, odio tristique amet, duis. Nunc tortor elit aliquet quis in mauris.",
-      email: "person@gmail.com",
-    },
-    {
-      img: Profile,
-      name: "Dil Doe",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi, cras neque, lorem vel vulputate vitae aliquam. Pretium tristique nisi, ut commodo fames. Porttitor et sagittis egestas vitae metus, odio tristique amet, duis. Nunc tortor elit aliquet quis in mauris.",
-      email: "person@gmail.com",
-    },
-  ];
-  const image = [
-    ProductDetail.img,
-    "https://image.made-in-china.com/202f0j00qzERbZBFYluU/Home-Single-Sofa-Chair-Optional-Color-Fabric-Living-Room-Chairs.webp",
-    "https://images.woodenstreet.de/image/cache/data/Ettorez/23-05/VANITY+HB+BROWN/new/17-750x650.jpg",
-  ];
+  const { name, price, discount, img, stock, rate, category } =
+    ProductItem.find((item) => item.id == parseInt(productid));
+  const image = img;
   const reviewCount = useRef(Math.round(Math.random() * 100) + 1);
-
   const [qty, setQty] = useState(1);
   const [showdes, setShowdes] = useState(true);
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [reviewinput, setReviewinput] = useState("");
   const [review, setReview] = useState(reviewUser);
-  const [img, setImg] = useState(image[0]);
+  const [imgshow, setImgshow] = useState(image[0]);
+  const [heart, setHeart] = useState(false);
   const handleDecrease = () => {
     setQty(qty - 1 <= 0 ? 1 : parseInt(qty - 1));
   };
   const handleIncrease = () => {
-    setQty(qty >= 10 ? 10 : parseInt(qty + 1));
+    setQty(qty >= stock ? stock : parseInt(qty + 1));
   };
   const handleChange = (e) => {
     const value = e.target.value;
@@ -64,7 +40,7 @@ const ProductDetail = () => {
     }
     const num = parseInt(value);
     if (num <= 0) setQty(1);
-    else if (num > 10) setQty(10);
+    else if (num > stock) setQty(stock);
     else setQty(num);
   };
   const handleBlur = () => {
@@ -84,61 +60,75 @@ const ProductDetail = () => {
     setEmail("");
     setReviewinput("");
   };
+  useEffect(() => {
+    setImgshow(img[0]);
+  }, [productid]);
   return (
     <main className="w-full mt-10 flex flex-col items-center justify-center font-oxygen selection:bg-transparent">
       <section className="w-[95%] flex flex-col">
         <h1 className="flex md:text-[16px] text-[13px] items-center text-[#414141] gap-2">
-          <p className="text-[#7B7B7B]">Product Listing</p>
+          <Link to={"/Products"} className="text-[#7B7B7B]">
+            Product Listing
+          </Link>
           <p className="font-poppins text-[#7B7B7B] text-lg">&gt;</p>
-          {ProductDetail.name} - {productid}
+          {name}
         </h1>
         <article className="w-full mt-5 grid lg:grid-cols-2 lg:gap-6 gap-5">
           <div className="flex lg:flex-row flex-col-reverse gap-5">
-            <div className="lg:w-[120px] 2xl:w-[200px] w-full h-fit lg:h-[600px] flex lg:flex-col flex-row lg:justify-baseline justify-between lg:gap-5">
+            <div className="lg:w-[120px] 2xl:w-[200px] w-full h-fit lg:h-[600px] flex lg:flex-col flex-row lg:justify-baseline lg:gap-5">
               {image.map((item, index) => (
                 <img
                   key={index}
                   src={item}
-                  onClick={() => setImg(item)}
+                  onClick={() => setImgshow(item)}
                   className="rounded-md cursor-pointer lg:w-fit w-[32%] lg:h-1/3 object-cover object-center"
                   alt=""
                 />
               ))}
             </div>
-            <div className="w-full lg:[width:calc(100%-140px)]">
+            <div className="w-full lg:[width:calc(100%-140px)] relative">
               <img
-                src={img}
+                src={imgshow}
                 className="lg:h-[600px] 2xl:h-full h-full w-full object-cover object-center rounded-md"
                 alt=""
               />
+              {discount > 0 && (
+                <span className="text-white absolute top-3 left-3 rounded bg-black/70 px-3 text-[12px] py-1">
+                  -{discount}%
+                </span>
+              )}
             </div>
           </div>
           <div className="lg:px-5 py-3 flex flex-col 2xl:gap-5 gap-3 justify-center">
             <span className="flex flex-row justify-between items-center">
               <h1 className="md:text-[30px] text-[20px] font-bold text-[#2D2D2D]">
-                {ProductDetail.name}
+                {name}
               </h1>
               <FontAwesomeIcon
-                className="text-[#AEAEAE] text-[20px]"
+                className={`${
+                  heart ? "text-red-500" : "text-[#AEAEAE]"
+                } text-[20px] cursor-pointer transition-all duration-200`}
+                onClick={() => setHeart(!heart)}
                 icon={faHeart}
               />
             </span>
             <div className="flex items-center gap-3">
               <p className=" border-r-2 md:text-[25px] text-[18px] text-[#414141] pr-3">
-                <del className="pr-2 md:text-lg text-sm text-black/40">
-                  $60.00
-                </del>
-                $54.98
+                {discount > 0 && (
+                  <del className="pr-2 md:text-lg text-sm text-black/40">
+                    ${price.toFixed(2)}
+                  </del>
+                )}
+                ${(price * (1 - discount / 100)).toFixed(2)}
               </p>
               <span className="flex gap-1 text-[#A6A6A6] md:text-sm text-[12px]">
-                <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-                <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-                <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
-                <FontAwesomeIcon
-                  icon={faStarHalfStroke}
-                  className="text-yellow-400"
-                />
-                <FontAwesomeIcon icon={faStarRegular} />
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <FontAwesomeIcon
+                    key={index}
+                    icon={rate > index ? faStar : faStarRegular}
+                    className={rate > index ? "text-yellow-400" : ""}
+                  />
+                ))}
               </span>
               <p className="md:text-md text-[#414141] text-sm">
                 ({reviewCount.current} review)
@@ -269,7 +259,7 @@ const ProductDetail = () => {
             </div>
           ) : (
             <div className="flex flex-col gap-8 mt-5">
-              {review.map(({ img, name, review }, index) => (
+              {review.map(({ img, username, review }, index) => (
                 <div
                   key={index}
                   className="border-2 rounded-2xl border-[#D3D3D3] p-4"
@@ -282,7 +272,7 @@ const ProductDetail = () => {
                         alt=""
                       />
                       <h1 className="text-[#3D3D3D] text-[15px] font-semibold">
-                        {name}
+                        {username}
                       </h1>
                     </span>
                   </div>
@@ -318,8 +308,8 @@ const ProductDetail = () => {
                       </label>
                       <input
                         type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                         required
                         className="border-2 outline-none rounded-3xl px-4 py-2 border-[#919191] text-[#919191]"
                         placeholder="John Doe"

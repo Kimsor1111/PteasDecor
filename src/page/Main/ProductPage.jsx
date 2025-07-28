@@ -13,12 +13,11 @@ const ProductPage = () => {
   const [product, setProduct] = useState(ProductItem.slice(0, 8));
   const options = [
     { label: "All Categories", value: "All Categories" },
-    { label: "Electronic Devices", value: "Electronic Devices" },
-    { label: "Office Decors", value: "Office Decors" },
-    { label: "Natural Decors", value: "Natural Decors" },
-    { label: "Bedroom Decors", value: "Bedroom Decors" },
-    { label: "Living Room Decors", value: "Living Room Decors" },
-    { label: "Bathroom Decors", value: "Bathroom Decors" },
+    { label: "Bedroom", value: "Bedroom" },
+    { label: "Bathroom", value: "Bathroom" },
+    { label: "Kitchen", value: "Kitchen" },
+    { label: "Living Room", value: "Living Room" },
+    { label: "Dinner Room", value: "Dinner Room" },
   ];
   const priceRange = [
     { label: "Default Price", value: "Default Price" },

@@ -1,14 +1,23 @@
-import React from "react";
-import Bg from "./../../assets/Blog/BlogWidget.jpg";
-import profile from "./../../assets/Blog/Profile1.jpg";
-import { BlogData1 } from "../../data/Blog";
+import { BlogDataAll } from "../../data/Blog";
 import { BlogCard } from "../../components";
+import { useParams } from "react-router-dom";
 const BlogDetail = () => {
+  const { blogid } = useParams();
+  const p =
+    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.";
+  const h1 = "Lorem Ipsum Heading";
+  const { img, profile, name, date } = BlogDataAll.find(
+    (item) => item.id == blogid
+  );
+  const FeatureBlog = BlogDataAll.filter((item) => item.id != blogid).slice(
+    1,
+    4
+  );
   return (
     <main className="w-full flex flex-col items-center mt-10 font-oxygen gap-10">
       <section className="w-[95%] flex flex-col gap-4">
         <img
-          src={Bg}
+          src={img}
           className="lg:w-full lg:h-[600px] object-cover object-center rounded-3xl"
           alt=""
         />
@@ -18,134 +27,31 @@ const BlogDetail = () => {
         <div className="w-full flex px-2 items-center gap-2 mt-2">
           <img src={profile} alt="" className="size-[30px] rounded-full" />
           <p className="text-[15px] font-[400] text-[#404040]">
-            John Doe • 01 Jun 2025
+            {name} • {date}
           </p>
         </div>
-        <p className="font-exo md:text-lg text-sm text-[#666666] mt-3">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem
-          ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-          nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum
-          dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-          euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor
-          sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-          tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam.
-        </p>
-        <h1 className="font-exo font-semibold text-xl my-3">
-          Lorem Ipsum Heading
-        </h1>
-        <p className="font-exo md:text-lg text-sm text-[#666666]">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem
-          ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-          nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum
-          dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-          euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor
-          sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-          tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam.
-        </p>
+        <p className="font-exo md:text-lg text-sm text-[#666666] mt-3">{p}</p>
+        <h1 className="font-exo font-semibold text-xl my-3">{h1}</h1>
+        <p className="font-exo md:text-lg text-sm text-[#666666]">{p}</p>
       </section>
       <section className="w-[95%] flex flex-col gap-8">
         <div className="w-full grid md:grid-cols-2 gap-5 grid-cols-1">
-          <img src={Bg} className="rounded-3xl" alt="" />
-          <img src={Bg} className="rounded-3xl" alt="" />
+          <img src={img} className="rounded-3xl" alt="" />
+          <img src={img} className="rounded-3xl" alt="" />
         </div>
-        <p className="font-exo md:text-lg text-sm text-[#666666]">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem
-          ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-          nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum
-          dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-          euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor
-          sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-          tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam.
-        </p>
-        <h1 className="font-exo font-semibold text-xl my-3">
-          Lorem Ipsum Heading
-        </h1>
-        <p className="font-exo md:text-lg text-sm text-[#666666]">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem
-          ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-          nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum
-          dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-          euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor
-          sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-          tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-          ut laoreet dolore magna aliquam.
-        </p>
+        <p className="font-exo md:text-lg text-sm text-[#666666]">{p}</p>
+        <h1 className="font-exo font-semibold text-xl my-3">{h1}</h1>
+        <p className="font-exo md:text-lg text-sm text-[#666666]">{p}</p>
       </section>
       <section className="w-[95%] flex flex-col items-center">
         <h1 className="w-full mb-10 md:text-[36px] md:text-start text-center md:font-medium text-[#3D3D3D] font-semibold text-[28px]">
           Suggested Posts
         </h1>
         <div className="w-full grid lg:grid-cols-3 lg:gap-x-5 lg:gap-y-16 gap-12">
-          {BlogData1.map(({ img, profile, name, date, des }, index) => (
+          {FeatureBlog.map(({ id, img, profile, name, date, des }, index) => (
             <BlogCard
               key={index}
+              id={id}
               img={img}
               profile={profile}
               name={name}

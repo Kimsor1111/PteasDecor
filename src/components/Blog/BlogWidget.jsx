@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const BlogWidget = ({ img, title, des, profile, name, date }) => {
+const BlogWidget = ({ id, img, title, des, profile, name, date }) => {
   return (
     <Link
-      to={"/BlogDetail"}
+      to={`/BlogDetail/${id}`}
       className="w-full grid lg:grid-cols-2 grid-cols-1 gap-10"
     >
       <img src={img} alt="" className="rounded-3xl" />
