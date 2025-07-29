@@ -1,5 +1,5 @@
 import CartDetailsItem from "./CartDetailsItem";
-import img from "./../../assets/Product/p1.jpg";
+import p from "./../../assets/Product/bedroom/p1.1.jpg";
 const CartDetails = () => {
   const carts = [
     {

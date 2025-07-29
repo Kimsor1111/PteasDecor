@@ -1,8 +1,14 @@
 import BigHeroImg from "./../../assets/Home/BigHero.jpg";
-import P1 from "./../../assets/Product/p1.jpg";
-import P2_1 from "./../../assets/Product/p2.1.jpg";
-import P2_2 from "./../../assets/Product/p2.2.jpg";
-import P2_3 from "./../../assets/Product/p2.3.jpg";
+import P1_1 from "./../../assets/Product/bedroom/p1.1.jpg";
+import F1 from "./../../assets/Product/bedroom/p1.1.jpg";
+import F2 from "./../../assets/Product/bathroom/p1.1.jpg";
+import F3 from "./../../assets/Product/kitchen/p1.1.jpg";
+import F4 from "./../../assets/Product/livingroom/p1.1.jpg";
+import P1 from "./../../assets/Product/bedroom/p3.1.jpg";
+import P2 from "./../../assets/Product/bathroom/p2.2.jpg";
+import P3 from "./../../assets/Product/bathroom/p3.1.jpg";
+import P4 from "./../../assets/Product/dinner/p1.1.jpg";
+
 import Bedroom from "./../../assets/Home/Bedroom.jpg";
 import Living from "./../../assets/Home/Living.jpg";
 import Dinner from "./../../assets/Home/Dinner.jpg";
@@ -23,43 +29,43 @@ export const BigHeroData = {
 export const FeatureProductData = [
   {
     id: 1,
-    name: "Wooden Chair",
+    name: "Metal Bed Frame 7 Inches",
     price: 100.25,
     discount: 25,
     stock: 10,
     rate: 4,
-    category: "",
-    img: [P1],
+    category: "Bedroom",
+    img: F1,
   },
   {
     id: 2,
-    name: "Zmodo Wireless Camera",
+    name: "Bathroom Carbinet",
     price: 100.25,
     discount: 0,
     stock: 10,
     rate: 4,
-    category: "",
-    img: [P2_1, P2_2, P2_3],
+    category: "Bathroom",
+    img: F2,
   },
   {
     id: 3,
-    name: "Double Bed & Side Tables",
+    name: "Dish Drying Racks",
     price: 100.25,
     discount: 25,
     stock: 10,
     rate: 4,
-    category: "",
-    img: [P1],
+    category: "Kitchen",
+    img: F3,
   },
   {
     id: 4,
-    name: "Double Bed & Side Tables",
+    name: "2 Seater Sofa",
     price: 100.25,
     discount: 25,
     stock: 10,
     rate: 4,
-    category: "",
-    img: [P1],
+    category: "Living Room",
+    img: F4,
   },
 ];
 
@@ -81,83 +87,43 @@ export const CategoryData = [
 export const PopularProductData = [
   {
     id: 1,
-    name: "Double Bed & Side Tables",
+    name: "Mattress",
     price: 100.25,
     discount: 25,
     stock: 10,
     rate: 4,
-    category: "",
-    img: [P1],
+    category: "Bedroom",
+    img: P1,
   },
   {
     id: 2,
-    name: "Double Bed & Side Tables",
+    name: "Heated Towel Racks",
     price: 100.25,
     discount: 0,
     stock: 10,
     rate: 4,
-    category: "",
-    img: [P1],
+    category: "Bathroom",
+    img: P2,
   },
   {
     id: 3,
-    name: "Double Bed & Side Tables",
+    name: "Mirrors with LED Lighting",
     price: 100.25,
     discount: 25,
     stock: 10,
     rate: 4,
-    category: "",
-    img: [P1],
+    category: "Bathroom",
+    img: P3,
   },
   {
     id: 4,
-    name: "Double Bed & Side Tables",
+    name: "Dinning Tables & Chairs",
     price: 100.25,
     discount: 25,
     stock: 10,
     rate: 4,
     category: "",
-    img: [P1],
-  },
-  {
-    id: 5,
-    name: "Double Bed & Side Tables",
-    price: 100.25,
-    discount: 25,
-    stock: 10,
-    rate: 4,
-    category: "",
-    img: [P1],
-  },
-  {
-    id: 6,
-    name: "Double Bed & Side Tables",
-    price: 100.25,
-    discount: 0,
-    category: "",
-    stock: 10,
-    rate: 4,
-    img: [P1],
-  },
-  {
-    id: 7,
-    name: "Double Bed & Side Tables",
-    price: 100.25,
-    discount: 25,
-    stock: 10,
-    rate: 4,
-    category: "",
-    img: [P1],
-  },
-  {
-    id: 8,
-    name: "Double Bed & Side Tables",
-    price: 100.25,
-    discount: 25,
-    stock: 10,
-    rate: 4,
-    category: "",
-    img: [P1],
+    img: P4,
   },
 ];
 

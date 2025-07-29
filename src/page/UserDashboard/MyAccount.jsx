@@ -2,7 +2,7 @@ import { OrderEntry, PaymentMethod } from "../../components";
 import Visa from "./../../assets/Payment/visa.jpg";
 import Master from "./../../assets/Payment/master.jpg";
 import { Link } from "react-router-dom";
-import p from "./../../assets/Product/p1.jpg";
+import p from "./../../assets/Product/bedroom/p1.1.jpg";
 const MyAccount = () => {
   const OrderProduct = [
     {

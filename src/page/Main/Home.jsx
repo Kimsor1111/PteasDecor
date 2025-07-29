@@ -48,7 +48,7 @@ const Home = () => {
                   name={name}
                   price={price}
                   discount={discount}
-                  img={img[0]}
+                  img={img}
                 />
               )
             )}

@@ -1,8 +1,17 @@
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 const ProductCard = ({ id, img, discount, price, name }) => {
+  const navigate = useNavigate();
   return (
-    <Link to={`/Products/ProductDetail/${id}`} className="relative">
+    <Link
+      to={`/Products/ProductDetail/${name.replaceAll(/\s+/g, "-")}`}
+      onClick={(e) => {
+        e.preventDefault();
+        navigate(`/Products/ProductDetail/${name.replaceAll(/\s+/g, "-")}`, {
+          state: { productid: id },
+        });
+      }}
+      className="relative cursor-pointer"
+    >
       {discount > 0 && (
         <span className="absolute top-2 left-3 bg-[#3D3D3D] text-[11px] text-white px-3 tracking-wider rounded-md py-[2px]">
           -{discount}%

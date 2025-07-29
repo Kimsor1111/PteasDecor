@@ -1,26 +1,28 @@
 import Profile from "./../../assets/Blog/Profile4.jpg";
-import P1 from "./../../assets/Product/p1.jpg";
-import P2_1 from "./../../assets/Product/p2.1.jpg";
-import P2_2 from "./../../assets/Product/p2.2.jpg";
-import P2_3 from "./../../assets/Product/p2.3.jpg";
+import P1_1 from "./../../assets/Product/bedroom/p1.1.jpg";
+import P1_2 from "./../../assets/Product/bedroom/p1.2.jpg";
+import P1_3 from "./../../assets/Product/bedroom/p1.3.jpg";
+import P2_1 from "./../../assets/Product/bedroom/p2.1.jpg";
+import P2_2 from "./../../assets/Product/bedroom/p2.2.jpg";
+import P2_3 from "./../../assets/Product/bedroom/p2.3.jpg";
 export const ProductItem = [
   {
     id: 1,
-    name: "Double Bed & Side Tables",
+    name: "Metal Bed Frame",
     price: 100.25,
     discount: 25,
     rate: 4,
-    category: "",
+    category: "Bedroom",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2, P1_3],
   },
   {
     id: 2,
-    name: "Zmodo Wireless Camera",
+    name: "Wooden Bed Frame",
     price: 100.25,
     discount: 0,
     rate: 4,
-    category: "",
+    category: "Bedroom",
     stock: 10,
     img: [P2_1, P2_2, P2_3],
   },
@@ -32,7 +34,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 4,
@@ -42,7 +44,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 5,
@@ -52,7 +54,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 6,
@@ -62,14 +64,14 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 7,
     name: "Double Bed & Side Tables",
     price: 100.25,
     discount: 0,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 8,
@@ -79,7 +81,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 9,
@@ -89,7 +91,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 10,
@@ -99,7 +101,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 11,
@@ -109,7 +111,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 12,
@@ -119,7 +121,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 13,
@@ -129,7 +131,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 14,
@@ -139,7 +141,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 15,
@@ -149,7 +151,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
   {
     id: 16,
@@ -159,7 +161,7 @@ export const ProductItem = [
     rate: 4,
     category: "",
     stock: 10,
-    img: [P1],
+    img: [P1_1, P1_2],
   },
 ];
 export const reviewUser = [

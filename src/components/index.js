@@ -19,3 +19,4 @@ export { default as CartDetails } from "./Cart/CartDetails";
 export { default as ItemEntry } from "./UserDashboard/ItemEntry";
 export { default as PaymentCard } from "./UserDashboard/PaymentCard";
 export { default as WishlistEntry } from "./UserDashboard/WishlistEntry";
+export { default as ImagePreview } from "./Product/ImagePreview";

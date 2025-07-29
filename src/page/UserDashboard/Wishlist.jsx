@@ -1,6 +1,5 @@
 import { WishlistEntry } from "../../components";
-import p from "./../../assets/Product/p1.jpg";
-import { useState } from "react";
+import p from "./../../assets/Product/bedroom/p1.1.jpg";
 const Wishlist = () => {
   const wishlistproduct = [
     {

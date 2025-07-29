@@ -1,5 +1,5 @@
 import { CartItem, ProductCard } from "../../components";
-import img from "./../../assets/Product/p1.jpg";
+import p from "./../../assets/Product/bedroom/p1.1.jpg";
 import { Link } from "react-router-dom";
 const Cart = () => {
   const carts = [
@@ -9,7 +9,7 @@ const Cart = () => {
       price: 180,
       discount: 13,
       qty: 1,
-      imgsrc: img,
+      imgsrc: p,
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ const Cart = () => {
       price: 180,
       discount: 13,
       qty: 1,
-      imgsrc: img,
+      imgsrc: p,
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ const Cart = () => {
       price: 180,
       discount: 13,
       qty: 1,
-      imgsrc: img,
+      imgsrc: p,
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ const Cart = () => {
       price: 180,
       discount: 13,
       qty: 1,
-      imgsrc: img,
+      imgsrc: p,
     },
   ];
   const sum = carts.reduce(

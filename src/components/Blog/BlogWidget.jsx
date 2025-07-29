@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const BlogWidget = ({ id, img, title, des, profile, name, date }) => {
+  const navigate = useNavigate();
   return (
     <Link
-      to={`/BlogDetail/${id}`}
-      className="w-full grid lg:grid-cols-2 grid-cols-1 gap-10"
+      to={`/Blog/BlogDetail/${name.replaceAll(/\s+/g, "-")}`}
+      onClick={(e) => {
+        e.preventDefault();
+        navigate(`/Blog/BlogDetail/${name.replaceAll(/\s+/g, "-")}`, {
+          state: { blogid: id },
+        });
+      }}
+      className="w-full grid lg:grid-cols-2 grid-cols-1 gap-10 cursor-pointer"
     >
       <img src={img} alt="" className="rounded-3xl" />
       <div className="flex flex-col items-center lg:items-baseline justify-center gap-5">

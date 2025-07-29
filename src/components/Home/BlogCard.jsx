@@ -1,9 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const BlogCard = ({ id, img, profile, name, date, des }) => {
+  const navigate = useNavigate();
   return (
-    <Link to={`/BlogDetail/${id}`} className="flex flex-col gap-3">
+    <Link
+      to={`/Blog/BlogDetail/${name.replaceAll(/\s+/g, "-")}`}
+      onClick={(e) => {
+        e.preventDefault();
+        navigate(`/Blog/BlogDetail/${name.replaceAll(/\s+/g, "-")}`, {
+          state: { blogid: id },
+        });
+      }}
+      className="flex flex-col gap-3 cursor-pointer"
+    >
       <img
         src={img}
         alt=""

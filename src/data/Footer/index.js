@@ -84,22 +84,22 @@ export const FooterLi = [
     submenu: [
       {
         name: "Refund & Return Policy",
-        path: "/PrivacyPolicy/Refund_&_Return_Policy",
+        path: "/PrivacyPolicy/Refund-&-Return-Policy",
         icon: faMoneyBill,
       },
       {
         name: "Delivery & Shipping Policy",
-        path: "/PrivacyPolicy/Delivery_&_Shipping_Policy",
+        path: "/PrivacyPolicy/Delivery-&-Shipping-Policy",
         icon: faTruckArrowRight,
       },
       {
         name: "Terms & Conditions",
-        path: "/PrivacyPolicy/Terms_&_Conditions",
+        path: "/PrivacyPolicy/Terms-&-Conditions",
         icon: faGear,
       },
       {
         name: "Terms of Service",
-        path: "/PrivacyPolicy/Terms_of_Service",
+        path: "/PrivacyPolicy/Terms-of-Service",
         icon: faServicestack,
       },
     ],

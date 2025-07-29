@@ -8,7 +8,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { ItemEntry } from "./../../components";
-import p from "./../../assets/Product/p1.jpg";
+import p from "./../../assets/Product/bedroom/p1.1.jpg";
 const TrackingOrderDetail = () => {
   const Cart = [
     {

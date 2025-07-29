@@ -141,7 +141,7 @@ const ProductPage = () => {
                 name={name}
                 price={price}
                 discount={discount}
-                img={img}
+                img={img[0]}
               />
             ))}
           </div>
