@@ -4,7 +4,8 @@ import { ProductItem, reviewUser } from "../../data/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ImagePreview, ProductCard } from "../../components";
 import { FeatureProductData } from "../../data/Home";
-import Profile from "./../../assets/Blog/profile1.jpg";
+import Profile from "./../../assets/Blog/Profile1.jpg";
+
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import {
   faHeart,
