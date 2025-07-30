@@ -38,7 +38,7 @@ export const FeatureProductData = [
     img: F1,
   },
   {
-    id: 2,
+    id: 11,
     name: "Bathroom Carbinet",
     price: 100.25,
     discount: 0,
@@ -48,7 +48,7 @@ export const FeatureProductData = [
     img: F2,
   },
   {
-    id: 3,
+    id: 21,
     name: "Dish Drying Racks",
     price: 100.25,
     discount: 25,
@@ -58,7 +58,7 @@ export const FeatureProductData = [
     img: F3,
   },
   {
-    id: 4,
+    id: 31,
     name: "2 Seater Sofa",
     price: 100.25,
     discount: 25,
@@ -86,7 +86,7 @@ export const CategoryData = [
 
 export const PopularProductData = [
   {
-    id: 1,
+    id: 3,
     name: "Mattress",
     price: 100.25,
     discount: 25,
@@ -96,7 +96,7 @@ export const PopularProductData = [
     img: P1,
   },
   {
-    id: 2,
+    id: 12,
     name: "Heated Towel Racks",
     price: 100.25,
     discount: 0,
@@ -106,7 +106,7 @@ export const PopularProductData = [
     img: P2,
   },
   {
-    id: 3,
+    id: 13,
     name: "Mirrors with LED Lighting",
     price: 100.25,
     discount: 25,
@@ -116,13 +116,13 @@ export const PopularProductData = [
     img: P3,
   },
   {
-    id: 4,
+    id: 41,
     name: "Dinning Tables & Chairs",
     price: 100.25,
     discount: 25,
     stock: 10,
     rate: 4,
-    category: "",
+    category: "Dining Room",
     img: P4,
   },
 ];

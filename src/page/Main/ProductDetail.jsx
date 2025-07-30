@@ -80,12 +80,19 @@ const ProductDetail = () => {
             <Link to={"/Products"} className="text-[#7B7B7B]">
               Product Listing
             </Link>
+
+            <p className="font-poppins text-[#7B7B7B] text-lg">&gt;</p>
+            {category}
             <p className="font-poppins text-[#7B7B7B] text-lg">&gt;</p>
             {name}
           </h1>
           <article className="w-full mt-5 grid lg:grid-cols-2 lg:gap-6 gap-5">
             <div className="flex lg:flex-row flex-col-reverse gap-5">
-              <div className="lg:w-[120px] 2xl:w-[200px] w-full h-fit lg:h-[600px] flex lg:flex-col flex-row justify-between lg:justify-baseline lg:gap-5">
+              <div
+                className={`${
+                  image.length < 3 ? "justify-start gap-5" : "justify-between"
+                } lg:w-[120px] 2xl:w-[200px] w-full h-fit lg:h-[600px] flex lg:flex-col flex-row lg:gap-5 lg:justify-start `}
+              >
                 {image.map((item, index) => (
                   <img
                     key={index}
@@ -376,14 +383,20 @@ const ProductDetail = () => {
           </h1>
           <div className="grid grid-cols-2 gap-4 mt-10 lg:grid-cols-4">
             {FeatureProductData.map(
-              ({ id, name, price, discount, img }, index) => (
+              (
+                { id, name, price, discount, stock, rate, category, img },
+                index
+              ) => (
                 <ProductCard
                   key={index}
                   id={id}
                   name={name}
                   price={price}
                   discount={discount}
-                  img={img[0]}
+                  stock={stock}
+                  rate={rate}
+                  category={category}
+                  img={img}
                 />
               )
             )}

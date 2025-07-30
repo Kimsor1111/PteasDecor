@@ -41,13 +41,19 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-2 gap-4 mt-10 lg:grid-cols-4">
             {FeatureProductData.map(
-              ({ id, name, price, discount, img }, index) => (
+              (
+                { id, name, price, discount, stock, rate, category, img },
+                index
+              ) => (
                 <ProductCard
                   key={index}
                   id={id}
                   name={name}
                   price={price}
                   discount={discount}
+                  stock={stock}
+                  rate={rate}
+                  category={category}
                   img={img}
                 />
               )
@@ -96,13 +102,19 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-2 gap-4 mt-10 lg:grid-cols-4">
             {PopularProductData.map(
-              ({ id, name, price, discount, img }, index) => (
+              (
+                { id, name, price, discount, stock, rate, category, img },
+                index
+              ) => (
                 <ProductCard
                   key={index}
                   id={id}
                   name={name}
                   price={price}
                   discount={discount}
+                  stock={stock}
+                  rate={rate}
+                  category={category}
                   img={img}
                 />
               )

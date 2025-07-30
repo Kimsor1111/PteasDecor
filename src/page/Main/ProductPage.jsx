@@ -17,7 +17,7 @@ const ProductPage = () => {
     { label: "Bathroom", value: "Bathroom" },
     { label: "Kitchen", value: "Kitchen" },
     { label: "Living Room", value: "Living Room" },
-    { label: "Dinner Room", value: "Dinner Room" },
+    { label: "Dining Room", value: "Dining Room" },
   ];
   const priceRange = [
     { label: "Default Price", value: "Default Price" },
@@ -134,16 +134,24 @@ const ProductPage = () => {
             </span>
           </div>
           <div className="grid grid-cols-2 justify-center md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-[30px] space-y-5 mx-10 lg:mx-0">
-            {product.map(({ id, name, price, discount, img }, index) => (
-              <ProductCard
-                key={index}
-                id={id}
-                name={name}
-                price={price}
-                discount={discount}
-                img={img[0]}
-              />
-            ))}
+            {product.map(
+              (
+                { id, name, price, discount, stock, rate, category, img },
+                index
+              ) => (
+                <ProductCard
+                  key={index}
+                  id={id}
+                  name={name}
+                  price={price}
+                  discount={discount}
+                  stock={stock}
+                  rate={rate}
+                  category={category}
+                  img={img[0]}
+                />
+              )
+            )}
           </div>
           <div className="flex flex-col items-center w-full gap-4">
             <span className="text-[#414141] text-[16px]">
