@@ -84,7 +84,7 @@ const ProductDetail = () => {
           </h1>
           <article className="w-full mt-5 grid lg:grid-cols-2 lg:gap-6 gap-5">
             <div className="flex lg:flex-row flex-col-reverse gap-5">
-              <div className="lg:w-[120px] 2xl:w-[200px] w-full h-fit lg:h-[600px] flex lg:flex-col flex-row lg:justify-baseline lg:gap-5">
+              <div className="lg:w-[120px] 2xl:w-[200px] w-full h-fit lg:h-[600px] flex lg:flex-col flex-row justify-between lg:justify-baseline lg:gap-5">
                 {image.map((item, index) => (
                   <img
                     key={index}

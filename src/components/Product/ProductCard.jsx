@@ -3,10 +3,10 @@ const ProductCard = ({ id, img, discount, price, name }) => {
   const navigate = useNavigate();
   return (
     <Link
-      to={`/Products/ProductDetail/${name.replaceAll(/\s+/g, "-")}`}
+      to={`/Products/ProductDetail/${name.replace(/\s+/g, "-")}`}
       onClick={(e) => {
         e.preventDefault();
-        navigate(`/Products/ProductDetail/${name.replaceAll(/\s+/g, "-")}`, {
+        navigate(`/Products/ProductDetail/${name.replace(/\s+/g, "-")}`, {
           state: { productid: id },
         });
       }}
