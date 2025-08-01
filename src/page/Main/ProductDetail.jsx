@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { ProductItem, reviewUser } from "../../data/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ImagePreview, ProductCard } from "../../components";
-import { FeatureProductData } from "../../data/Home";
 import Profile from "./../../assets/Blog/Profile1.jpg";
 
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
@@ -67,6 +66,12 @@ const ProductDetail = () => {
   useEffect(() => {
     setImgshow(img[0]);
   }, [productid]);
+  const similarProduct = ProductItem.filter(
+    (f) => f.category == category && f.id != productid
+  )
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 4)
+    .map((p) => ({ ...p, img: p.img[0] }));
   return (
     <>
       <ImagePreview
@@ -382,7 +387,7 @@ const ProductDetail = () => {
             Similar Products
           </h1>
           <div className="grid grid-cols-2 gap-4 mt-10 lg:grid-cols-4">
-            {FeatureProductData.map(
+            {similarProduct.map(
               (
                 { id, name, price, discount, stock, rate, category, img },
                 index
