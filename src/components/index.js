@@ -20,3 +20,4 @@ export { default as ItemEntry } from "./UserDashboard/ItemEntry";
 export { default as PaymentCard } from "./UserDashboard/PaymentCard";
 export { default as WishlistEntry } from "./UserDashboard/WishlistEntry";
 export { default as ImagePreview } from "./Product/ImagePreview";
+export { default as DescriptionReview } from "./Product/DescriptionReview";

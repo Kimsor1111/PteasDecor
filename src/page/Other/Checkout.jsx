@@ -7,7 +7,7 @@ const Checkout = () => {
     navigate("Payment");
   };
   return (
-    <main className="flex flex-col items-center w-full h-full mt-16">
+    <main className="flex flex-col items-center w-full h-full mt-16 font-oxygen">
       <section className="w-[95%] md:w-[90%] flex flex-col-reverse lg:flex-row gap-[30px] lg:gap-[50px]">
         <aside className="w-full lg:w-[60%] h-fit rounded-xl  flex flex-col pb-5">
           <div className="py-5 bg-[#20263E] rounded-t-[11px] grid grid-cols-3 gap-3 font-poppins font-semibold text-white text-[18px] md:text-[20px]">

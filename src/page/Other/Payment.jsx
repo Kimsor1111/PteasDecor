@@ -52,7 +52,7 @@ const Payment = () => {
     return () => (document.documentElement.style.overflowY = "auto");
   }, [success, failed]);
   return (
-    <main className="w-full h-full flex flex-col items-center gap-[100px] mt-[100px]">
+    <main className="w-full h-full flex flex-col items-center gap-[100px] mt-[100px] font-oxygen">
       <div className="w-[95%] md:w-[90%] flex flex-col lg:flex-row gap-[30px] lg:gap-[50px]">
         <aside className="w-full lg:w-[60%] h-fit rounded-xl flex flex-col pb-5">
           <div className="py-5 bg-[#20263E] rounded-t-[11px] grid grid-cols-3 gap-3 font-poppins font-semibold text-white text-[18px] md:text-[20px]">

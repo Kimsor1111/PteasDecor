@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Checkbox, ProductCard } from "./../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronRight,
-  faSearch,
-  faSliders,
-  faX,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faSliders, faX } from "@fortawesome/free-solid-svg-icons";
 import { ProductItem } from "./../../data/Product";
 
 const ProductPage = () => {
-  const [product, setProduct] = useState(ProductItem.slice(0, 8));
   const options = [
     { label: "All Categories", value: "All Categories" },
     { label: "Bedroom", value: "Bedroom" },
@@ -21,19 +15,19 @@ const ProductPage = () => {
   ];
   const priceRange = [
     { label: "Default Price", value: "Default Price" },
-    { label: "$0.00 - $20.00", value: "$0.00 - $20.00" },
-    { label: "$20.00 - $50.00", value: "$20.00 - $50.00" },
-    { label: "$50.00 - $100.00", value: "$50.00 - $100.00" },
-    { label: "$100.00 - $200.00", value: "$100.00 - $200.00" },
-    { label: "$200.00 - $500.00", value: "$200.00 - $500.00" },
+    { label: "$0.00 - $30.00", value: "0.00-30.00" },
+    { label: "$30.00 - $60.00", value: "30.00-60.00" },
+    { label: "$60.00 - $90.00", value: "60.00-90.00" },
+    { label: "$90.00 - $120.00", value: "90.00-120.00" },
+    { label: "$120+", value: "120.00" },
   ];
-  const [category, setCategory] = useState("All Categories");
+  const [category, setCategory] = useState(options[0].value);
   const handleCategory = (value) => {
-    setCategory((prev) => (prev === value ? "" : value));
+    setCategory(value);
   };
-  const [price, setPrice] = useState("Default Price");
+  const [price, setPrice] = useState(priceRange[0].value);
   const handlePrice = (value) => {
-    setPrice((prev) => (prev === value ? "" : value));
+    setPrice(value);
   };
   const [filter, setFilter] = useState(false);
   useEffect(() => {
@@ -46,10 +40,27 @@ const ProductPage = () => {
       document.body.style.overflow = "auto";
     };
   }, [filter]);
+  const Filter = useMemo(() => {
+    let filtered = [...ProductItem];
+    if (category !== "All Categories")
+      filtered = filtered.filter((p) => p.category === category);
+    if (price !== "Default Price") {
+      const [min, max] = price.includes("-")
+        ? price.split("-").map((pr) => parseFloat(pr))
+        : [parseFloat(price), Infinity];
+      filtered = filtered.filter(
+        (p) =>
+          p.price * (1 - p.discount / 100) >= min &&
+          p.price * (1 - p.discount / 100) <= max
+      );
+    }
+    return filtered;
+  }, [category, price]);
+
   return (
-    <main className="w-screen lg:w-full h-auto relative lg:flex mt-[20px]">
+    <main className="w-screen lg:w-full h-auto relative lg:flex mt-[20px] font-oxygen">
       <aside
-        className={`lg:w-[27%] xl:w-[22%] fixed lg:sticky top-20 lg:top-[15%] w-[85%] md:w-1/2 lg:translate-x-0 z-[10] bg-white h-full duration-500 ${
+        className={`lg:w-[27%] xl:w-[22%] fixed lg:sticky top-20 lg:top-[15%] w-full md:w-1/2 lg:translate-x-0 z-[10] bg-white h-full duration-500 ${
           filter ? "translate-x-0" : "translate-x-[-100%]"
         }`}
       >
@@ -100,12 +111,12 @@ const ProductPage = () => {
           filter ? "block" : "hidden"
         }`}
       ></div>
-      <aside className="lg:w-[73%] xl:w-[78%] w-screen h-full flex flex-col items-center z-[1]">
-        <div className="lg:w-[93%] flex flex-col items-center lg:items-baseline gap-5">
+      <aside className="lg:w-[73%] xl:w-[78%] w-full  h-full flex flex-col items-center z-[1]">
+        <div className="lg:w-[98%] w-full flex flex-col items-center lg:items-baseline gap-5">
           <span className="text-[26px] lg:text-[36px] w-full lg:w-fit text-center font-oxygen font-semibold text-[#3D3D3D]">
             Our Collection Of Products
           </span>
-          <div className="relative w-[80%] lg:w-full">
+          <div className="relative w-[95%] lg:w-full">
             <input
               className="w-full sticky top-0 font-oxygen ps-[20px] pe-[8px] text-[16px] text-[#5F5F5F] rounded-[42px] border-[1px] border-[#00000026] py-[8px] focus:outline-none focus:bg-transparent focus:ring-0"
               type="search"
@@ -116,7 +127,7 @@ const ProductPage = () => {
               icon={faSearch}
             />
           </div>
-          <div className="flex gap-2 w-full ps-[10%] items-center lg:hidden">
+          <div className="w-[95%] flex gap-2 items-center lg:hidden">
             <FontAwesomeIcon
               onClick={() => setFilter(true)}
               className="border-[1px] border-gray-400 px-3 py-1 rounded-md text-white bg-gray-800/90 text-[20px]"
@@ -124,52 +135,57 @@ const ProductPage = () => {
             />
             <span className="text-gray-700/90">Filter</span>
           </div>
-          <div className="w-[80%] lg:w-full text-center lg:text-start">
-            <h1 className="text-[16px] text-[#414141] font-semibold">
-              Showing 1-{product.length} of {ProductItem.length} Item(s)
-            </h1>
-            <span className="text-[#949494] text-[16px] ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              sapiente nihil maxime blanditiis repellendus.
-            </span>
-          </div>
-          <div className="grid grid-cols-2 justify-center md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-[30px] space-y-5 mx-10 lg:mx-0">
-            {product.map(
-              (
-                { id, name, price, discount, stock, rate, category, img },
-                index
-              ) => (
-                <ProductCard
-                  key={index}
-                  id={id}
-                  name={name}
-                  price={price}
-                  discount={discount}
-                  stock={stock}
-                  rate={rate}
-                  category={category}
-                  img={img[0]}
-                />
-              )
-            )}
-          </div>
-          <div className="flex flex-col items-center w-full gap-4">
-            <span className="text-[#414141] text-[16px]">
-              Showing {product.length} of {ProductItem.length} item(s)
-            </span>
-            {product.length != ProductItem.length && (
+
+          <span className="text-[#949494] text-[16px] w-[95%] lg:w-full">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            sapiente nihil maxime blanditiis repellendus.
+          </span>
+          {Filter.length == 0 ? (
+            <div className="w-full text-[#919191] h-[405px] flex flex-col items-center justify-center">
+              <span>
+                <svg
+                  className="shrink-0 inline w-6 h-6 me-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                No products were found matching your selection.
+              </span>
               <button
-                className={`flex gap-2 items-center bg-[#282828] px-5 py-2 rounded-full text-white text-[16px] font-poppins active:bg-gray-800 cursor-pointer`}
-                onClick={() => setProduct(ProductItem)}
+                className="mt-5 bg-black text-white py-3 px-5 rounded-full font-exo"
+                onClick={() => {
+                  setCategory(options[0].value);
+                  setPrice(priceRange[0].value);
+                }}
               >
-                Load More
-                <FontAwesomeIcon
-                  className="text-[12px]"
-                  icon={faChevronRight}
-                />
+                Clear Filter
               </button>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 w-[95%] md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-[30px] space-y-5 mx-10 lg:mx-0">
+              {Filter.map(
+                (
+                  { id, name, price, discount, stock, rate, category, img },
+                  index
+                ) => (
+                  <ProductCard
+                    key={index}
+                    id={id}
+                    name={name}
+                    price={price}
+                    discount={discount}
+                    stock={stock}
+                    rate={rate}
+                    category={category}
+                    img={img[0]}
+                  />
+                )
+              )}
+            </div>
+          )}
         </div>
       </aside>
     </main>

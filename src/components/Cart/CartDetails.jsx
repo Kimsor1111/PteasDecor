@@ -1,5 +1,4 @@
 import CartDetailsItem from "./CartDetailsItem";
-import p from "./../../assets/Product/bedroom/p1.1.jpg";
 const CartDetails = () => {
   const carts = [
     {
@@ -8,7 +7,6 @@ const CartDetails = () => {
       price: 180,
       discount: 13,
       qty: 1,
-      imgsrc: img,
     },
     {
       id: 2,
@@ -16,7 +14,6 @@ const CartDetails = () => {
       price: 180,
       discount: 13,
       qty: 1,
-      imgsrc: img,
     },
     {
       id: 3,
@@ -24,7 +21,6 @@ const CartDetails = () => {
       price: 180,
       discount: 13,
       qty: 1,
-      imgsrc: img,
     },
     {
       id: 4,
@@ -32,7 +28,6 @@ const CartDetails = () => {
       price: 180,
       discount: 13,
       qty: 1,
-      imgsrc: img,
     },
   ];
   const subtotal = carts.reduce(
