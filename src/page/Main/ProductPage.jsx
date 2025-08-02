@@ -128,12 +128,13 @@ const ProductPage = () => {
             />
           </div>
           <div className="w-[95%] flex gap-2 items-center lg:hidden">
-            <FontAwesomeIcon
+            <div
+              className="w-fit h-[40px] bg-white cursor-pointer font-oxygen text-sm items-center flex px-4 mt-2 border text-black/80 lg:hidden border-black/30 gap-3"
               onClick={() => setFilter(true)}
-              className="border-[1px] border-gray-400 px-3 py-1 rounded-md text-white bg-gray-800/90 text-[20px]"
-              icon={faSliders}
-            />
-            <span className="text-gray-700/90">Filter</span>
+            >
+              <FontAwesomeIcon icon={faSliders} />
+              <p>Filter</p>
+            </div>
           </div>
 
           <span className="text-[#949494] text-[16px] w-[95%] lg:w-full">
