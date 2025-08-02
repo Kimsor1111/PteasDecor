@@ -1,8 +1,14 @@
 import { useRef, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ProductItem, reviewUser } from "../../data/Product";
+import { ProductItem } from "../../data/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { DescriptionReview, ImagePreview, ProductCard } from "../../components";
+import {
+  CartWidget,
+  DescriptionReview,
+  ImagePreview,
+  ProductCard,
+  WishlistWidget,
+} from "../../components";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import {
   faBoxesStacked,
@@ -22,6 +28,8 @@ const ProductDetail = () => {
   const [qty, setQty] = useState(1);
   const [imgshow, setImgshow] = useState(image[0]);
   const [heart, setHeart] = useState(false);
+  const [cart, setCart] = useState(false);
+  const [wishlist, setWishlist] = useState(false);
   const [preview, setPreview] = useState(false);
   const handleDecrease = () => {
     setQty(qty - 1 <= 0 ? 1 : parseInt(qty - 1));
@@ -52,6 +60,21 @@ const ProductDetail = () => {
     .sort(() => Math.random() - 0.5)
     .slice(0, 4)
     .map((p) => ({ ...p, img: p.img[0] }));
+  const handleCart = () => {
+    setCart(true);
+    setTimeout(() => setCart(false), 5000);
+  };
+  const handleWishlist = () => {
+    if (!heart) {
+      setHeart(true);
+      setWishlist(true);
+      setTimeout(() => setWishlist(false), 5000);
+    } else {
+      setHeart(false);
+      setWishlist(false);
+      alert("Remove from wishlist");
+    }
+  };
   return (
     <>
       <ImagePreview
@@ -59,6 +82,27 @@ const ProductDetail = () => {
         preview={preview}
         setPreview={setPreview}
       />
+      {stock != 0 && (
+        <>
+          <CartWidget
+            img={image[0]}
+            name={name}
+            price={price}
+            discount={discount}
+            qty={qty}
+            cart={cart}
+            setCart={setCart}
+          />
+          <WishlistWidget
+            img={image[0]}
+            name={name}
+            price={price}
+            discount={discount}
+            wishlist={wishlist}
+            setHeart={setWishlist}
+          />
+        </>
+      )}
       <main className="w-full mt-10 flex flex-col items-center justify-center font-oxygen selection:bg-transparent">
         <section className="w-[95%] flex flex-col">
           <h1 className="flex md:text-[16px] text-[13px] items-center text-[#414141] gap-2">
@@ -116,7 +160,7 @@ const ProductDetail = () => {
                   className={`${
                     heart ? "text-red-500" : "text-[#AEAEAE]"
                   } text-[20px] cursor-pointer transition-all duration-200`}
-                  onClick={() => setHeart(!heart)}
+                  onClick={handleWishlist}
                   icon={faHeart}
                 />
               </span>
@@ -192,7 +236,10 @@ const ProductDetail = () => {
                         +
                       </p>
                     </div>
-                    <button className="[width:calc(100%-130px)] font-bold text-[17px] rounded-full  h-full cursor-pointer bg-black text-white flex items-center justify-center">
+                    <button
+                      onClick={handleCart}
+                      className="[width:calc(100%-130px)] font-bold text-[17px] rounded-full  h-full cursor-pointer bg-black text-white flex items-center justify-center"
+                    >
                       Add to Cart
                     </button>
                   </div>

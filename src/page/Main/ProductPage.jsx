@@ -142,18 +142,7 @@ const ProductPage = () => {
           </span>
           {Filter.length == 0 ? (
             <div className="w-full text-[#919191] h-[405px] flex flex-col items-center justify-center">
-              <span>
-                <svg
-                  className="shrink-0 inline w-6 h-6 me-3"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                </svg>
-                No products were found matching your selection.
-              </span>
+              No products were found matching your selection.
               <button
                 className="mt-5 bg-black text-white py-3 px-5 rounded-full font-exo"
                 onClick={() => {

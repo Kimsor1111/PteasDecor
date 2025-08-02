@@ -21,3 +21,5 @@ export { default as PaymentCard } from "./UserDashboard/PaymentCard";
 export { default as WishlistEntry } from "./UserDashboard/WishlistEntry";
 export { default as ImagePreview } from "./Product/ImagePreview";
 export { default as DescriptionReview } from "./Product/DescriptionReview";
+export { default as CartWidget } from "./Product/CartWidget";
+export { default as WishlistWidget } from "./Product/WishlistWidget";
