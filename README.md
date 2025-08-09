@@ -95,7 +95,7 @@ Follow these steps to set up and run the PteasDecor project on your local machin
 Make sure you have the following installed to run this project:
 
 - **[Node.js](https://nodejs.org/)** (version 14 or higher recommended)
-- **[npm](https://www.npmjs.com/)** (comes bundled with Node.js) or **[Yarn](https://yarnpkg.com/)**
+- **[npm](https://www.npmjs.com/)** (comes bundled with Node.js) or **[yarn](https://yarnpkg.com/)**
 - A modern web browser (Chrome, Firefox, Edge, etc.)
 
 <p id="installation">
@@ -225,7 +225,7 @@ Project Link: [https://github.com/Kimsor1111/PteasDecor](https://github.com/Kims
 
 <!-- ACKNOWLEDGMENTS -->
 
-## Acknowledgments 🙏
+## Acknowledgements 🙏
 
 - Thanks to the React community for the fantastic library and support.
 - Inspiration and UI ideas from various home decor websites and e-commerce templates.
