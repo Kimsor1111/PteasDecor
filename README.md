@@ -24,89 +24,100 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Table of Contents 📑</summary> 
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About The Project</a> 📖
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Built With 🛠️</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Getting Started 🚀</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">Prerequisites ✅</a></li>
+        <li><a href="#installation">Installation 💾</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#usage">Usage 🧑‍💻</a></li>
+    <li><a href="#roadmap">Roadmap 🛤️</a></li>
+    <li><a href="#contributing">Contributing 🤝</a></li>
+    <li><a href="#license">License 📜</a></li>
+    <li><a href="#contact">Contact 📬</a></li>
+    <li><a href="#acknowledgments">Acknowledgments 🙏</a></li>
   </ol>
 </details>
 
 
 
+
 <!-- ABOUT THE PROJECT -->
-## About The Project
 <p id="about-the-project">
-  [![Project Screenshot][project-screenshot]](https://example.com)
-  
-  There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-  
-  Here's why:
-  * Your time should be focused on creating something amazing. A project that solves a problem and helps others
-  * You shouldn't be doing the same tasks over and over like creating a README from scratch
-  * You should implement DRY principles to the rest of your life :smile:
-  
-  Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-  
-  Use the `BLANK_README.md` to get started.
 </p>
 
+## About The Project
+[![Project Screenshot][project-screenshot]](https://example.com)
+
+  There are plenty of e-commerce projects out there, but I didn’t find one that perfectly fit a modern home decoration store built with ReactJS — so I created PteasDecor. This project aims to be a clean, easy-to-use template for anyone building a home décor shopping site.
+
+Here’s why PteasDecor stands out:
+
+  * It focuses on showcasing beautiful home decoration products with a user-friendly ReactJS interface.
+
+  * It saves you time by providing a well-organized folder structure and reusable components.
+
+  * It embraces best practices like component-based architecture and responsive design 😄.
+
+Of course, every project has its own unique needs, so I’m continuously improving PteasDecor. Feel free to contribute by forking, opening an issue, or sending a pull request. Thanks to everyone who helps make this project better!
+
+
+<p id="built-with">
+</p>
 
 ### Tools & Technologies
 
-<p id="built-with">
+[![HTML][HTML]][HTML-url]
+[![CSS][CSS]][CSS-url]
+[![JS][JS]][JS-url]
+[![FontAwesome][FontAwesome]][FontAwesome-url]
 [![React][React.js]][React-url]
-</p>
+[![TailwindCSS][TailwindCSS]][TailwindCSS-url]
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Getting Started 🚀
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Follow these steps to set up and run the PteasDecor project on your local machine for development and testing purposes.
 
-### Prerequisites
+### Prerequisites ✅
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Make sure you have the following installed to run this project:
 
-### Installation
+  * **[Node.js](https://nodejs.org/)** (version 14 or higher recommended)  
+  * **[npm](https://www.npmjs.com/)** (comes bundled with Node.js) or **[Yarn](https://yarnpkg.com/)**  
+  * A modern web browser (Chrome, Firefox, Edge, etc.)
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+### Installation 💾
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repository
    ```sh
    git clone https://github.com/github_username/repo_name.git
    ```
-3. Install NPM packages
+2. Open PteasDecor Project
+   ```sh
+   cd PteasDecor
+   ```
+4. Clone the repo
+   
+5. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+6. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
-5. Change git remote url to avoid accidental pushes to base project
+7. Change git remote url to avoid accidental pushes to base project
    ```sh
    git remote set-url origin github_username/repo_name
    git remote -v # confirm the changes
@@ -218,6 +229,16 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [project-screenshot]: images/screenshot.png
+[HTML]: https://img.shields.io/badge/HTML-20232A?style=for-the-badge&logo=html5&logoColor=E34F26
+[HTML-url]: https://www.w3schools.com/html/
+[CSS]: https://img.shields.io/badge/CSS-20232A?style=for-the-badge&logo=css&logoColor=1572B6
+[CSS-url]: https://www.w3schools.com/css/
+[JS]: https://img.shields.io/badge/javascript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+[JS-url]: https://www.w3schools.com/js/
+[FontAwesome]: https://img.shields.io/badge/FontAwesome-20232A?style=for-the-badge&logo=font-awesome&logoColor=#538DD7
+[FontAwesome-url]: https://fontawesome.com/
+[TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-20232A?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC
+[TailwindCSS-url]: https://tailwindcss.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 
