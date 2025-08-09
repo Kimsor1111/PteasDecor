@@ -150,7 +150,7 @@ Make sure you have the following installed to run this project:
 
 ## Folders Structure 📂
 
-**/PteasDecor**
+<h1>**PteasDecor**</h1>
 
 **│**
 
