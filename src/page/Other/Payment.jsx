@@ -52,10 +52,20 @@ const Payment = () => {
     return () => (document.documentElement.style.overflowY = "auto");
   }, [success, failed]);
   return (
-    <main className="w-full h-full flex flex-col items-center gap-[100px] mt-[100px] font-oxygen">
-      <div className="w-[95%] md:w-[90%] flex flex-col lg:flex-row gap-[30px] lg:gap-[50px]">
-        <aside className="w-full lg:w-[60%] h-fit rounded-xl flex flex-col pb-5">
-          <div className="py-5 bg-[#20263E] rounded-t-[11px] grid grid-cols-3 gap-3 font-poppins font-semibold text-white text-[18px] md:text-[20px]">
+    <main className="w-full h-full flex flex-col items-center gap-8 mt-[50px] font-exo">
+      <section className="w-[95%]">
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl  font-bold text-[#2d2d2d]">Payment</h1>
+        </div>
+        <p className="text-[16px] text-[#575757] mt-4 ">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.
+        </p>
+      </section>
+      <section className="w-[95%] flex flex-col lg:flex-row gap-10 lg:gap-[4%]">
+        <aside className="w-full lg:w-[58%] h-fit rounded-xl flex flex-col pb-5">
+          <div className="py-5 bg-[#20263E] rounded-t-[11px] grid grid-cols-3 gap-3 font-semibold text-white text-[18px] md:text-[20px]">
             <h1 className="w-full text-center">Personal</h1>
             <h1 className="w-full text-center">Billing</h1>
             <h1 className="w-full text-center">Confirmation</h1>
@@ -105,10 +115,10 @@ const Payment = () => {
             </button>
           </form>
         </aside>
-        <aside className="w-full lg:w-[35%] h-fit rounded-xl flex flex-col">
+        <aside className="w-full lg:w-[38%] h-fit rounded-xl flex flex-col">
           <CartDetails />
         </aside>
-      </div>
+      </section>
       {success && (
         <>
           <div className="fixed top-0 left-0 z-10 w-screen h-screen bg-black/50"></div>

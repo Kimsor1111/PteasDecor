@@ -1,12 +1,10 @@
-import React from "react";
-
 const CustomerRating = ({ img, title, des, subdes }) => {
   return (
     <div className="w-full relative">
       <img
         className="w-full h-[550px] lg:h-[700px] object-cover object-bottom"
         src={img}
-        alt=""
+        alt={title}
       />
       <div className="w-full h-full bg-black/60 absolute top-0 flex items-center justify-center">
         <div className="w-[90%] h-[500px] flex lg:flex-row flex-col items-center justify-center lg:justify-between lg:gap-10 gap-8">

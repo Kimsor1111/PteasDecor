@@ -20,7 +20,7 @@ const BlogDetail = () => {
         <img
           src={img}
           className="lg:w-full lg:h-[600px] object-cover object-center rounded-3xl"
-          alt=""
+          alt={name}
         />
         <h1 className="lg:text-[30px] md:text-2xl text-md  font-bold text-[#3D3D3D]">
           Lorem Ipsum Is a Dummy Text Used As The Heading Of a Blog
@@ -37,8 +37,8 @@ const BlogDetail = () => {
       </section>
       <section className="w-[95%] flex flex-col gap-8">
         <div className="w-full grid md:grid-cols-2 gap-5 grid-cols-1">
-          <img src={img} className="rounded-3xl" alt="" />
-          <img src={img} className="rounded-3xl" alt="" />
+          <img src={img} className="rounded-3xl" alt={name} />
+          <img src={img} className="rounded-3xl" alt={name} />
         </div>
         <p className="font-exo md:text-lg text-sm text-[#666666]">{p}</p>
         <h1 className="font-exo font-semibold text-xl my-3">{h1}</h1>

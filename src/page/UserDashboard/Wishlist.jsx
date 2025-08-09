@@ -1,33 +1,20 @@
 import { WishlistEntry } from "../../components";
-import p from "./../../assets/Product/bedroom/p1.1.jpg";
+import { useSelector, useDispatch } from "react-redux";
+import { removefromwishlist, emptywishlist } from "../../app/wishlistSlice";
+import { wishlistocart } from "./../../app/cartSlice";
 const Wishlist = () => {
-  const wishlistproduct = [
-    {
-      img: p,
-      name: "Double Bed & Dressing",
-      price: 123.45,
-      stock: 10,
-    },
-    {
-      img: p,
-      name: "Double Bed & Dressing",
-      price: 123.45,
-      stock: 10,
-    },
-    {
-      img: p,
-      name: "Double Bed & Dressing",
-      price: 123.45,
-      stock: 10,
-    },
-  ];
+  const { wishlistItems } = useSelector((state) => state.wishlist);
+  const dispatch = useDispatch();
   return (
     <>
-      <main className="flex flex-col items-center justify-center w-full mt-10 font-oxygen">
+      <main className="flex flex-col items-center justify-center w-full mt-10 font-exo">
         <section className="w-[95%]">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl  font-bold text-[#2d2d2d]">Wishlist</h1>
-            <p className="hover:underline text-[16px] text-[#575757] cursor-pointer text-nowrap">
+            <p
+              onClick={() => dispatch(emptywishlist())}
+              className="hover:underline text-[16px] text-[#575757] cursor-pointer text-nowrap"
+            >
               Clear All
             </p>
           </div>
@@ -41,19 +28,45 @@ const Wishlist = () => {
             <h1 className="w-full">Price</h1>
             <h1 className="w-full">Stock</h1>
             <h1 className="w-full text-center">Remove</h1>
-            <h1 className="w-full text-center">Add To Cart</h1>
+            <h1 className="w-full text-center">Add to Cart</h1>
           </div>
-          <div className="md:text-[16px] text-[11px]">
-            {wishlistproduct.map(({ img, name, price, stock }, index) => (
-              <WishlistEntry
-                key={index}
-                img={img}
-                name={name}
-                price={price}
-                stock={stock}
-              />
-            ))}
-          </div>
+          {wishlistItems.length == 0 ? (
+            <p className="w-full text-lg h-[345px] border-t-0 flex items-center justify-center text-[#919191] border-2 border-[#DEDFE1] rounded-b-[11px]">
+              No Items In Wishlist.
+            </p>
+          ) : (
+            <div className="md:text-[16px] text-[11px]">
+              {wishlistItems.map(
+                ({ id, image, name, price, stock, discount }, index) => (
+                  <WishlistEntry
+                    key={id}
+                    id={id}
+                    img={image}
+                    name={name}
+                    price={price}
+                    stock={stock}
+                    discount={discount}
+                    len={wishlistItems.length - 1 == index}
+                    remove={() => dispatch(removefromwishlist(id))}
+                    addtocart={() => {
+                      const qty = 1;
+                      dispatch(
+                        wishlistocart({
+                          id,
+                          name,
+                          price,
+                          discount,
+                          stock,
+                          qty,
+                          image,
+                        })
+                      );
+                    }}
+                  />
+                )
+              )}
+            </div>
+          )}
         </section>
       </main>
     </>

@@ -5,7 +5,7 @@ const BigHeroSection = ({ img, title, des }) => {
     <section className="relative w-full h-auto">
       <img
         src={img}
-        alt=""
+        alt={title}
         className="w-full md:h-auto h-[400px] xl:[height:calc(100vh-200px)] object-cover object-center"
       />
       <div className="absolute top-0 left-0 flex flex-col items-center justify-center gap-5 size-full md:bg-black/65 bg-black/70">

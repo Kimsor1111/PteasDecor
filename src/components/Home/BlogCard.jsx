@@ -1,14 +1,13 @@
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 const BlogCard = ({ id, img, profile, name, date, des }) => {
   const navigate = useNavigate();
+  const path = `/Blog/BlogDetail/${name.replaceAll(/\s+/g, "-")}`;
   return (
     <Link
-      to={`/Blog/BlogDetail/${name.replaceAll(/\s+/g, "-")}`}
+      to={path}
       onClick={(e) => {
         e.preventDefault();
-        navigate(`/Blog/BlogDetail/${name.replaceAll(/\s+/g, "-")}`, {
+        navigate(path, {
           state: { blogid: id },
         });
       }}
@@ -16,13 +15,13 @@ const BlogCard = ({ id, img, profile, name, date, des }) => {
     >
       <img
         src={img}
-        alt=""
+        alt={name}
         className="w-full lg:h-auto md:h-[400px] object-cover object-center rounded-3xl"
       />
       <div className="w-full flex px-2 items-center gap-2">
         <img
           src={profile}
-          alt=""
+          alt={name}
           className="size-[30px] object-cover object-center rounded-full"
         />
         <p className="text-[15px] font-[400] text-[#404040]">

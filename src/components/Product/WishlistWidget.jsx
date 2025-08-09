@@ -1,14 +1,7 @@
 import { faHeart, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-const WishlistWidget = ({
-  img,
-  name,
-  price,
-  discount,
-  wishlist,
-  setWishlist,
-}) => {
+const WishlistWidget = ({ img, name, price, discount, wishlist, setHeart }) => {
   return (
     <div
       className={`${
@@ -24,7 +17,7 @@ const WishlistWidget = ({
           </p>
           <FontAwesomeIcon
             icon={faX}
-            onClick={() => setWishlist(false)}
+            onClick={() => setHeart(false)}
             className="absolute right-5 top-5 text-sm cursor-pointer"
           />
         </span>

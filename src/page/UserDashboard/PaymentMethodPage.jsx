@@ -33,7 +33,7 @@ const paymentCards = [
 ];
 const PaymentMethodPage = () => {
   return (
-    <main className="w-full h-full px-[20px] lg:px-[100px] flex flex-col gap-5 mt-[50px] md:mt-[100px] font-oxygen">
+    <main className="w-full h-full px-[20px] lg:px-[50px] flex flex-col gap-5 mt-[50px] font-oxygen">
       <h1 className="text-[30px] font-semibold">Payment Methods</h1>
       <span className="font-medium">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam natus

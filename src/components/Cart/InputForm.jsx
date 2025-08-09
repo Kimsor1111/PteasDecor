@@ -3,7 +3,7 @@ const InputForm = ({ label, type, onValidChange, value, setValue }) => {
   const [expiry, setExpiry] = useState("");
   const [error, setError] = useState("");
   const isValidExpiry = (dateStr) => {
-    const today = new Date().toISOString().slice(0, 7); // "YYYY-MM"
+    const today = new Date().toISOString().slice(0, 7);
     return dateStr >= today;
   };
   useEffect(() => {

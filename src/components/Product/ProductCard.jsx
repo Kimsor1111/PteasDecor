@@ -1,12 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 const ProductCard = ({ id, name, price, discount, stock, img }) => {
   const navigate = useNavigate();
+  const path = `/Products/ProductDetail/${name.replace(/\s+/g, "-")}`;
   return (
     <Link
-      to={`/Products/ProductDetail/${name.replace(/\s+/g, "-")}`}
+      to={path}
       onClick={(e) => {
         e.preventDefault();
-        navigate(`/Products/ProductDetail/${name.replace(/\s+/g, "-")}`, {
+        navigate(path, {
           state: { productid: id },
         });
       }}
@@ -18,17 +19,17 @@ const ProductCard = ({ id, name, price, discount, stock, img }) => {
         </span>
       )}
       <div className="bg-[#E8E8E8] rounded-2xl">
-        <img src={img} alt="" className=" mb-2 rounded-2xl" />
+        <img src={img} alt={name} className=" mb-2 rounded-2xl" />
       </div>
       <div className="flex flex-col justify-center gap-2 px-2 my-5">
-        <h1 className="md:text-[18px] text-[14px] text-[#404040] w-full md:text-center">
+        <h1 className="md:text-[18px] text-[14px] text-[#404040] w-full">
           {name}
         </h1>
         <div>
           <span className="md:text-sm flex gap-2 items-center text-[11px]">
-            <p>
+            <p className="flex gap-1 text-[#414141]">
               {discount > 0 && (
-                <del className="mr-1 text-[#404040]">${price.toFixed(2)}</del>
+                <del className="mr-1 text-[#919191]">${price.toFixed(2)}</del>
               )}
               ${(price - (price * discount) / 100).toFixed(2)}
             </p>

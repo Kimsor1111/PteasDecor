@@ -7,12 +7,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const OrderEntry = ({
   orderid,
+  status,
   img,
   name,
-  status,
   trackingid,
   deliverydate,
   price,
+  discount,
+  qty,
 }) => {
   return (
     <div
@@ -54,7 +56,9 @@ const OrderEntry = ({
         </p>
       </div>
       <p className="text-[8px] md:text-[12px] text-[#6A6A6A]">{deliverydate}</p>
-      <p className="text-[8px] md:text-[12px] text-[#6A6A6A]">{price}$</p>
+      <p className="text-[8px] md:text-[12px] text-[#6A6A6A]">
+        ${(price * (1 - discount / 100) * qty).toFixed(2)}
+      </p>
     </div>
   );
 };

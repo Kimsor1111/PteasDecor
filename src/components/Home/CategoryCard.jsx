@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router-dom";
-
 const CategoryCard = ({ img, title }) => {
   return (
     <Link
@@ -9,7 +7,7 @@ const CategoryCard = ({ img, title }) => {
     >
       <img
         src={img}
-        alt=""
+        alt={title}
         className="rounded-3xl group-hover:scale-105 transition-all duration-500"
       />
       <span className=" size-full bg-black/20 absolute top-0 left-0 rounded-3xl flex items-end justify-center pb-3 lg:text-xl md:text-sm text-lg font-semibold text-white">

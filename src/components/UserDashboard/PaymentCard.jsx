@@ -36,7 +36,7 @@ const PaymentCard = ({ img, cardNumber, name, cvv, expiry, Default }) => {
         />
       </div>
       {Default && (
-        <span className="absolute top-0 right-0 px-2 py-1 bg-blue-500 text-white rounded-tr-[5px]">
+        <span className="absolute top-0 right-0 px-2 py-1 bg-blue-500/80 text-white rounded-tr-[5px]">
           Default
         </span>
       )}

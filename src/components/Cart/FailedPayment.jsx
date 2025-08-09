@@ -2,7 +2,7 @@ import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const FailedPayment = ({ setFailed }) => {
   return (
-    <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[50%] fixed py-[60px] rounded-xl top-1/2 -translate-1/2 left-1/2 z-20 bg-white flex flex-col items-center justify-center gap-6 font-oxygen border border-[#949494]">
+    <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[50%] fixed py-[60px] rounded-xl top-1/2 -translate-1/2 left-1/2 z-20 bg-white flex flex-col items-center justify-center gap-6 font-exo border border-[#949494]">
       <FontAwesomeIcon
         className="text-[50px] text-red-600"
         icon={faCircleXmark}

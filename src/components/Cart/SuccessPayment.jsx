@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SuccessPayment = ({ setSuccess }) => {
   return (
-    <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] fixed py-[60px] rounded-xl top-1/2 -translate-1/2 left-1/2 z-20 bg-white flex flex-col items-center justify-center gap-6 font-oxygen">
+    <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] fixed py-[60px] rounded-xl top-1/2 -translate-1/2 left-1/2 z-20 bg-white flex flex-col items-center justify-center gap-6 font-exo">
       <FontAwesomeIcon
         className="text-[50px] text-green-500"
         icon={faCheckCircle}
@@ -22,7 +22,7 @@ const SuccessPayment = ({ setSuccess }) => {
           Go to Homepage
         </Link>
         <Link
-          to='/MyAccount'
+          to="/MyAccount"
           onClick={() => setSuccess(false)}
           className="px-5 py-2 font-semibold border border-black rounded-full hover:bg-gray-100 active:bg-gray-200 font-exo"
         >

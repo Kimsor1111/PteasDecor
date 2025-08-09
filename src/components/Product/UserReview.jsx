@@ -1,5 +1,3 @@
-import React from "react";
-
 const UserReview = ({ img, username, review }) => {
   return (
     <div className="border-2 rounded-2xl border-[#D3D3D3] p-4">

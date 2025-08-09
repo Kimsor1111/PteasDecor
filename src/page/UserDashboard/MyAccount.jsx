@@ -2,37 +2,9 @@ import { OrderEntry, PaymentMethod } from "../../components";
 import Visa from "./../../assets/Payment/visa.jpg";
 import Master from "./../../assets/Payment/master.jpg";
 import { Link } from "react-router-dom";
-import p from "./../../assets/Product/bedroom/p1.1.jpg";
+import { useSelector } from "react-redux";
 const MyAccount = () => {
-  const OrderProduct = [
-    {
-      orderid: 2103,
-      img: p,
-      name: "Double Bed & Dressing",
-      status: "In Progress",
-      trackingid: 2176413876,
-      deliverydate: "23-07-2021",
-      price: 123.45,
-    },
-    {
-      orderid: 2103,
-      img: p,
-      name: "Double Bed & Dressing",
-      status: "Succeed",
-      trackingid: 2176413876,
-      deliverydate: "23-07-2021",
-      price: 123.45,
-    },
-    {
-      orderid: 2103,
-      img: p,
-      name: "Double Bed & Dressing",
-      status: "Failed",
-      trackingid: 2176413876,
-      deliverydate: "23-07-2021",
-      price: 123.45,
-    },
-  ];
+  const { cartItems } = useSelector((state) => state.cart);
   const payment = [
     {
       name: "MasterCard (Default)",
@@ -76,25 +48,28 @@ const MyAccount = () => {
             <h1 className="w-full">Delivery Date</h1>
             <h1 className="w-full">Price</h1>
           </div>
-          <div className="md:text-[16px] text-[11px]">
-            {OrderProduct.map(
-              (
-                { orderid, img, name, status, trackingid, deliverydate, price },
-                index
-              ) => (
+          {cartItems.length == 0 ? (
+            <p className="w-full text-lg h-[345px] border-t-0 flex items-center justify-center text-[#919191] border-2 border-[#DEDFE1] rounded-b-[11px]">
+              No Items In Order.
+            </p>
+          ) : (
+            <div className="md:text-[16px] text-[11px]">
+              {cartItems.map(({ image, name, price, discount, qty }, index) => (
                 <OrderEntry
                   key={index}
-                  orderid={orderid}
-                  img={img}
+                  orderid={2003}
+                  img={image}
                   name={name}
-                  status={status}
-                  trackingid={trackingid}
-                  deliverydate={deliverydate}
+                  status={"Succeed"}
+                  trackingid={2176413876}
+                  deliverydate={"23-07-2021"}
                   price={price}
+                  discount={discount}
+                  qty={qty}
                 />
-              )
-            )}
-          </div>
+              ))}
+            </div>
+          )}
         </section>
         <section className="w-[95%] mt-10">
           <div className="flex items-center justify-between mt-5">

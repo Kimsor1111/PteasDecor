@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ProductItem } from "../../data/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,19 +18,28 @@ import {
   faStar,
   faTruckArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { addtocart } from "./../../app/cartSlice";
+import { addtowishlist, removefromwishlist } from "../../app/wishlistSlice";
 const ProductDetail = () => {
   const { state } = useLocation();
+  const { cartItems } = useSelector((state) => state.cart);
+  const { wishlistItems } = useSelector((state) => state.wishlist);
+  const dispatch = useDispatch();
   const productid = state.productid;
-  const { name, price, discount, img, stock, rate, category } =
+  const { id, name, price, discount, img, stock, rate, category } =
     ProductItem.find((item) => item.id == parseInt(productid));
+  let overstock = cartItems.find((item) => item.id === productid);
   const image = img;
   const reviewCount = useRef(Math.round(Math.random() * 100) + 1);
   const [qty, setQty] = useState(1);
   const [imgshow, setImgshow] = useState(image[0]);
-  const [heart, setHeart] = useState(false);
+  const heart = wishlistItems.some((item) => item.id === id);
   const [cart, setCart] = useState(false);
+  const [over, setOver] = useState(false);
   const [wishlist, setWishlist] = useState(false);
   const [preview, setPreview] = useState(false);
+
   const handleDecrease = () => {
     setQty(qty - 1 <= 0 ? 1 : parseInt(qty - 1));
   };
@@ -51,30 +60,52 @@ const ProductDetail = () => {
   const handleBlur = () => {
     if (qty === "") setQty(1);
   };
-  useEffect(() => {
-    setImgshow(img[0]);
-  }, [productid]);
-  const similarProduct = ProductItem.filter(
-    (f) => f.category == category && f.id != productid
-  )
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 4)
-    .map((p) => ({ ...p, img: p.img[0] }));
   const handleCart = () => {
-    setCart(true);
-    setTimeout(() => setCart(false), 5000);
-  };
-  const handleWishlist = () => {
-    if (!heart) {
-      setHeart(true);
-      setWishlist(true);
-      setTimeout(() => setWishlist(false), 5000);
+    if (!overstock || overstock.qty + qty <= stock) {
+      setCart(true);
+      setTimeout(() => setCart(false), 5000);
     } else {
-      setHeart(false);
-      setWishlist(false);
-      alert("Remove from wishlist");
+      setCart(false);
+      setOver(true);
+      setTimeout(() => setOver(false), 5000);
     }
   };
+  const handleWishlist = () => {
+    const image = img[0];
+    let wishlistProduct = wishlistItems.find((item) => item.id === productid);
+    if (!wishlistProduct) {
+      setWishlist(true);
+      setTimeout(() => setWishlist(false), 5000);
+      dispatch(
+        addtowishlist({
+          id,
+          name,
+          qty,
+          price,
+          discount,
+          image,
+          stock,
+        })
+      );
+    } else {
+      setWishlist(false);
+      dispatch(removefromwishlist(id));
+    }
+  };
+  const similarProduct = useMemo(() => {
+    return ProductItem.filter(
+      (f) => f.category == category && f.id != productid
+    )
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 4)
+      .map((p) => ({ ...p, img: p.img[0] }));
+  }, [productid]);
+  useEffect(() => {
+    setImgshow(img[0]);
+    setCart(false);
+    setWishlist(false);
+    setOver(false);
+  }, [productid]);
   return (
     <>
       <ImagePreview
@@ -83,26 +114,25 @@ const ProductDetail = () => {
         setPreview={setPreview}
       />
       {stock != 0 && (
-        <>
-          <CartWidget
-            img={image[0]}
-            name={name}
-            price={price}
-            discount={discount}
-            qty={qty}
-            cart={cart}
-            setCart={setCart}
-          />
-          <WishlistWidget
-            img={image[0]}
-            name={name}
-            price={price}
-            discount={discount}
-            wishlist={wishlist}
-            setHeart={setWishlist}
-          />
-        </>
+        <CartWidget
+          img={image[0]}
+          name={name}
+          price={price}
+          discount={discount}
+          qty={qty}
+          cart={cart}
+          setCart={setCart}
+          over={over}
+        />
       )}
+      <WishlistWidget
+        img={image[0]}
+        name={name}
+        price={price}
+        discount={discount}
+        wishlist={wishlist}
+        setHeart={setWishlist}
+      />
       <main className="w-full mt-10 flex flex-col items-center justify-center font-oxygen selection:bg-transparent">
         <section className="w-[95%] flex flex-col">
           <h1 className="flex md:text-[16px] text-[13px] items-center text-[#414141] gap-2">
@@ -237,7 +267,21 @@ const ProductDetail = () => {
                       </p>
                     </div>
                     <button
-                      onClick={handleCart}
+                      onClick={() => {
+                        const image = img[0];
+                        handleCart();
+                        dispatch(
+                          addtocart({
+                            id,
+                            name,
+                            qty,
+                            price,
+                            discount,
+                            image,
+                            stock,
+                          })
+                        );
+                      }}
                       className="[width:calc(100%-130px)] font-bold text-[17px] rounded-full  h-full cursor-pointer bg-black text-white flex items-center justify-center"
                     >
                       Add to Cart

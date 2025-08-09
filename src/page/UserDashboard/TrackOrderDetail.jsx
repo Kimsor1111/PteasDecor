@@ -8,56 +8,40 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { ItemEntry } from "./../../components";
-import p from "./../../assets/Product/bedroom/p1.1.jpg";
+import { useSelector } from "react-redux";
 const TrackingOrderDetail = () => {
-  const Cart = [
-    {
-      img: p,
-      name: "Double Beds & Chairs",
-      price: 12.34,
-      discount: 10.0,
-      qty: 1,
-    },
-    {
-      img: p,
-      name: "Double Beds & Chairs",
-      price: 12.34,
-      discount: 10.0,
-      qty: 1,
-    },
-    {
-      img: p,
-      name: "Double Beds & Chairs",
-      price: 12.34,
-      discount: 10.0,
-      qty: 1,
-    },
-  ];
+  const { cartItems } = useSelector((state) => state.cart);
+  const sum = cartItems
+    .reduce(
+      (prev, item) => prev + item.price * (1 - item.discount / 100) * item.qty,
+      0
+    )
+    .toFixed(2);
   const Process = [
     {
       title:
         "Your Order has been delivered. Thank you for shopping at PteasDecor.",
-      time: "20 Feb, 2025 at 19:32",
+      time: "20 Oct, 2025 at 19:32",
     },
     {
       title: "Your Order out for delivery.",
-      time: "20 Feb, 2025 at 19:32",
+      time: "20 Oct, 2025 at 19:32",
     },
     {
       title: "Pickup scheduled with carrier.",
-      time: "19 Feb, 2025 at 3:52",
+      time: "19 Oct, 2025 at 3:52",
     },
     {
       title: "Package ready for collection.",
-      time: "18 Feb, 2025 at 15:02",
+      time: "18 Oct, 2025 at 15:02",
     },
     {
       title: "Your Order is successfully verified",
-      time: "18 Feb, 2025 at 9:39",
+      time: "18 Oct, 2025 at 9:39",
     },
     {
       title: "Order placed",
-      time: "17 Feb, 2025 at 22:53",
+      time: "17 Oct, 2025 at 22:53",
     },
   ];
   return (
@@ -73,15 +57,15 @@ const TrackingOrderDetail = () => {
           <div>
             <p className=" md:text-md text-[12px] font-medium">#123456</p>
             <p className=" text-[10px] mt-2">
-              {Cart.length} Items • Order Placed in 17 Feb, 2025 at 17:32
+              {cartItems.length} Items • Order Placed in 17 Oct, 2025 at 17:32
             </p>
           </div>
           <div>
-            <p className="text-lg md:text-[30px] font-medium">$123.45</p>
+            <p className="text-lg md:text-[30px] font-medium">${sum}</p>
           </div>
         </div>
         <h1 className="mt-5 text-[14px] text-[#3C4242]">
-          Order expected arrival 23 Feb, 2025
+          Order expected arrival 23 Oct, 2025
         </h1>
         <div className="w-full h-[70px] relative mt-8 flex">
           <div className="w-full absolute  h-[15px] bg-[#20263e]/30 z-0"></div>
@@ -145,23 +129,29 @@ const TrackingOrderDetail = () => {
             </div>
           ))}
         </div>
-        <div className="mt-5">
-          <h1 className="text-sm font-medium">Item ({Cart.length})</h1>
-          <div className="mt-2">
-            {Cart.map(({ img, name, price, discount, qty }, index) => (
-              <ItemEntry
-                length={Cart.length}
-                key={index}
-                index={index}
-                name={name}
-                price={price}
-                discount={discount}
-                qty={qty}
-                isListImg={true}
-                img={img}
-              />
-            ))}
-          </div>
+        <div className="mt-5 font-exo">
+          <h1 className="text-sm font-medium">Item ({cartItems.length})</h1>
+          {cartItems.length == 0 ? (
+            <p className="border-y text-[#919191] my-3 py-5 flex items-center justify-center border-gray-500/40">
+              No Items In Order
+            </p>
+          ) : (
+            <div className="mt-2">
+              {cartItems.map(({ image, name, price, discount, qty }, index) => (
+                <ItemEntry
+                  length={cartItems.length}
+                  key={index}
+                  index={index}
+                  name={name}
+                  price={price}
+                  discount={discount}
+                  qty={qty}
+                  isListImg={true}
+                  img={image}
+                />
+              ))}
+            </div>
+          )}
         </div>
         <div className="w-full mt-5">
           <ul className="grid lg:grid-cols-4 grid-cols-1 lg:gap-10 gap-5">

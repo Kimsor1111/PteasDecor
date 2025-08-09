@@ -64,15 +64,15 @@ const ProductPage = () => {
           filter ? "translate-x-0" : "translate-x-[-100%]"
         }`}
       >
-        <div className="flex justify-end mt-[20px] w-full pe-[20px] lg:hidden">
+        <div className="flex justify-end lg:mt-0 mt-[20px] w-full pe-[20px] lg:hidden">
           <FontAwesomeIcon
             className="text-[25px]"
             onClick={() => setFilter(false)}
             icon={faX}
           />
         </div>
-        <div className="w-full h-auto lg:overflow-y-auto lg:max-h-[calc(100vh-100px)] flex flex-col lg:items-center items-center gap-[20px] lg:py-[20px]">
-          <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit lg:mt-[10px] w-[230px] lg:w-[240px] xl:w-[80%]">
+        <div className="w-full h-auto lg:overflow-y-auto lg:max-h-[calc(100vh-100px)] flex flex-col lg:items-center items-center gap-[20px]">
+          <div className="flex flex-col justify-center px-[20px] py-[20px] border-[1px] border-[#E2E2E2] h-fit w-[230px] lg:w-[240px] xl:w-[80%]">
             <span className="border-s-2 border-black ps-2 text-[22px] font-medium text-[#2D2D2D]">
               Categories
             </span>

@@ -1,5 +1,3 @@
-import React from "react";
-
 import track from "./../../assets/TrackOrder/trackorder.jpg";
 import { Link } from "react-router-dom";
 const TrackingOrder = () => {
