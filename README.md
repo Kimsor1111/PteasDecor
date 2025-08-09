@@ -1,4 +1,4 @@
-<img width="1800" height="2055" alt="image" src="https://github.com/user-attachments/assets/a2de92d5-6c6b-4df8-a2ba-df88f4523df2" />[![Contributors][contributors-shield]][contributors-url]
+[![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
