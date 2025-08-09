@@ -40,9 +40,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage 🧑‍💻</a></li>
-    <li><a href="#roadmap">Roadmap 🛤️</a></li>
-    <li><a href="#contributing">Contributing 🤝</a></li>
-    <li><a href="#license">License 📜</a></li>
+    <li><a href="#contributors">Contributors 🤝</a></li>
     <li><a href="#contact">Contact 📬</a></li>
     <li><a href="#acknowledgments">Acknowledgments 🙏</a></li>
   </ol>
@@ -85,9 +83,15 @@ Of course, every project has its own unique needs, so I’m continuously improvi
 
 
 <!-- GETTING STARTED -->
+<p id="getting-started">
+</p>
+
 ## Getting Started 🚀
 
 Follow these steps to set up and run the PteasDecor project on your local machine for development and testing purposes.
+
+<p id="prerequisites">
+</p>
 
 ### Prerequisites ✅
 
@@ -96,6 +100,9 @@ Make sure you have the following installed to run this project:
   * **[Node.js](https://nodejs.org/)** (version 14 or higher recommended)  
   * **[npm](https://www.npmjs.com/)** (comes bundled with Node.js) or **[Yarn](https://yarnpkg.com/)**  
   * A modern web browser (Chrome, Firefox, Edge, etc.)
+
+<p id="installation">
+</p>
 
 ### Installation 💾
 
@@ -138,19 +145,27 @@ Make sure you have the following installed to run this project:
      
 5. Open your browser and navigate to localhost url to see the app running.
 
+<p id="usage">
+</p>
+
 <!-- USAGE EXAMPLES -->
 ## Usage 🧑‍💻
 
 Use the app to browse home decoration products, view product details, add items to your cart, proceed to checkout, tracking order, add items to wishlist and filter products. Ideal for those wanting to test UI features or customize the store.
 
-<!-- CONTRIBUTORS -->
+<p id="contributors">
+</p>
 
+<!-- CONTRIBUTORS -->
 ## Contributors 🤝
 Contributions are welcome! Feel free to fork the repo, create feature branches, and submit pull requests. Please open issues for bugs or feature requests.
 
 <a href="https://github.com/Kimsor1111/PteasDecor/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Kimsor1111/PteasDecor" alt="contrib.rocks image" />
 </a>
+
+<p id="contact">
+</p>
 
 <!-- CONTACT -->
 ## Contact 📬
@@ -166,6 +181,8 @@ Contributions are welcome! Feel free to fork the repo, create feature branches, 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 
+<p id="acknowledgments">
+</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments 🙏
