@@ -150,38 +150,38 @@ Make sure you have the following installed to run this project:
 
 ## Folders Structure 📂
 
-**PteasDecor**
+### Here is PteasDecor folders structure:
 
-**│**
+```sh
 
-**├── /public                     # Static files like images, icons & _redirects**
+├── /public                     # Static files like images, icons & _redirects
 
-**├── /src                        # Source code files**
+├── /src                        # Source code files
 
-**│   ├── /app                    # Redux store setup (actions, reducers, slices)**
+│   ├── /app                    # Redux store setup (actions, reducers, slices)
 
-**│   ├── /assets                 # Images, fonts, and other media assets**
+│   ├── /assets                 # Images, fonts, and other media assets
 
-**│   ├── /components             # Reusable React components or UI elements**
+│   ├── /components             # Reusable React components or UI elements
 
-**│   ├── /data                   # Static data for whole website (Product, Footer, Navbar, ...)**
+│   ├── /data                   # Static data for whole website (Product, Footer, Navbar, ...)
 
-**│   ├── /layout                 # Layout components**
+│   ├── /layout                 # Layout components
 
-**│   ├── /pages                  # Page-level components or views**
+│   ├── /page                   # Page-level components or views
 
-**│   └── App.jsx                 # Static route component of whole website**
+│   └── App.jsx                 # Static route component of whole website
 
-**│   └── main.jsx                # Main application component**
+│   └── main.jsx                # Main application component
 
-**│**
+│
 
-**├── package.json                # Project metadata and dependencies**
+├── package.json                # Project metadata and dependencies
 
-**├── README.md                   # Project documentation**
+├── README.md                   # Project documentation
 
-**└── .gitignore                  # Files and folders to ignore in git**
-
+└── .gitignore                  # Files and folders to ignore in git
+```
 <p id="usage">
 </p>
 
