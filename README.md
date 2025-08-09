@@ -100,32 +100,43 @@ Make sure you have the following installed to run this project:
 ### Installation 💾
 
 1. Clone the repository
+   
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/Kimsor1111/PteasDecor.git
    ```
 2. Open PteasDecor Project
+   
    ```sh
    cd PteasDecor
    ```
-4. Clone the repo
-   
-5. Install NPM packages
-   ```sh
-   npm install
-   ```
-6. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-7. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
-   ```
+3. Install dependencies
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+    * Using npm:
+     
+       ```sh
+       npm install
+       ```
+     
+    * or using yarn:
+     
+       ```sh
+       yarn install
+       ```
+4. Start the development server
 
-
+    * Using npm:
+  
+       ```sh
+       npm run dev
+       ```
+     
+    * or using yarn:
+  
+       ```sh
+       yarn start
+       ```
+     
+5. Open your browser and navigate to localhost url to see the app running.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
