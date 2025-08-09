@@ -67,10 +67,12 @@ Of course, every project has its own unique needs, so I’m continuously improvi
 
 [![HTML][HTML]][HTML-url]
 [![CSS][CSS]][CSS-url]
-[![JS][JS]][JS-url]
-[![FontAwesome][FontAwesome]][FontAwesome-url]
-[![React][React.js]][React-url]
 [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
+[![FontAwesome][FontAwesome]][FontAwesome-url]
+[![JS][JS]][JS-url]
+[![React][React.js]][React-url]
+[![ReactRouter][ReactRouter.js]][ReactRouter-url]
+[![ReactRedux][ReactRedux.js]][ReactRedux-url]
 
 <!-- GETTING STARTED -->
 <p id="getting-started">
@@ -243,3 +245,7 @@ Project Link: [https://github.com/Kimsor1111/PteasDecor](https://github.com/Kims
 [TailwindCSS-url]: https://tailwindcss.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[ReactRouter.js]: https://img.shields.io/badge/ReactRouter-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[ReactRouter-url]: https://reactrouter.com/
+[ReactRedux.js]: https://img.shields.io/badge/ReactRedux-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[ReactRedux-url]: https://react-redux.js.org/
