@@ -200,7 +200,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[project-screenshot]: images/screenshot.png
+[project-screenshot]: src/assets/Logo/screenshot.png
 [HTML]: https://img.shields.io/badge/HTML-20232A?style=for-the-badge&logo=html5&logoColor=E34F26
 [HTML-url]: https://www.w3schools.com/html/
 [CSS]: https://img.shields.io/badge/CSS-20232A?style=for-the-badge&logo=css&logoColor=1572B6
