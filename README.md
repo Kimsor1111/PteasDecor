@@ -1,11 +1,4 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/Kimsor1111/PteasDecor">
     <img src="src/assets/Logo/PteasDecor.png" alt="Logo" width="250" height="250">
@@ -212,7 +205,7 @@ Contributions are welcome! Feel free to fork the repo, create feature branches, 
 
 ## Contact 📬
 
-**Ang Kimsor** - [Telegram](https://t.me/Thirtieth_October) - [angkimsor@gmail.com](mailto:angkimsor@gmail.com) - **Call Me ☎️ 85587932289**
+**Ang Kimsor** - [Telegram](https://t.me/Thirtieth_October) - [angkimsor@gmail.com](mailto:angkimsor@gmail.com) - **Call Me ☎️ +85587932289**
 
 **Nak Danin** - [Telegram](https://nakdanin) - [nakdanin@gmail.com](mailto:nakdanin@gmail.com) - **Call Me ☎️**
 
@@ -237,16 +230,6 @@ Project Link: [https://github.com/Kimsor1111/PteasDecor](https://github.com/Kims
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Kimsor1111/PteasDecor.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kimsor1111/PteasDecor/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kimsor1111/PteasDecor.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/Kimsor1111/PteasDecor.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Kimsor1111/PteasDecor.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [project-screenshot]: src/assets/Logo/image.png
 [HTML]: https://img.shields.io/badge/HTML-20232A?style=for-the-badge&logo=html5&logoColor=E34F26
 [HTML-url]: https://www.w3schools.com/html/
