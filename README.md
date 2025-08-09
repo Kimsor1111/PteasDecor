@@ -18,7 +18,7 @@
     Built with a responsive design, intuitive navigation, and a seamless shopping experience to help customers find the perfect pieces for their living spaces.
     <br />
     <br />
-    <a href="https://github.com/Kimsor1111/PteasDecor">View Demo</a>
+    <a href="https://pteasdecor.netlify.app/">View Demo</a>
   </p>
 </div>
 
