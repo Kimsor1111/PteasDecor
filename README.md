@@ -1,4 +1,4 @@
-[![Contributors][contributors-shield]][contributors-url]
+<img width="1800" height="2055" alt="image" src="https://github.com/user-attachments/assets/a2de92d5-6c6b-4df8-a2ba-df88f4523df2" />[![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -170,15 +170,15 @@ Contributions are welcome! Feel free to fork the repo, create feature branches, 
 <!-- CONTACT -->
 ## Contact 📬
 
-**Ang Kimsor** - [@angkimsor](https://angkimsor) - [angkimsor@gmail.com](mailto:angkimsor@gmail.com) - **Call Me ☎️ 85587932289**
+**Ang Kimsor** - [Telegram](https://t.me/Thirtieth_October) - [angkimsor@gmail.com](mailto:angkimsor@gmail.com) - **Call Me ☎️ 85587932289**
 
 
-**Nak Danin** - [@nakdanin](https://nakdanin) - [nakdanin@gmail.com](mailto:nakdanin@gmail.com) - **Call Me ☎️**
+**Nak Danin** - [Telegram](https://nakdanin) - [nakdanin@gmail.com](mailto:nakdanin@gmail.com) - **Call Me ☎️**
 
 
-**Heng Ousa** - [@hengousa](https://hengousa) - [hengousa@gmail.com](mailto:hengousa@gmail.com) - **Call Me ☎️**
+**Heng Ousa** - [Telegram](https://hengousa) - [hengousa@gmail.com](mailto:hengousa@gmail.com) - **Call Me ☎️**
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Kimsor1111/PteasDecor](https://github.com/Kimsor1111/PteasDecor)
 
 
 <p id="acknowledgments">
