@@ -139,92 +139,53 @@ Make sure you have the following installed to run this project:
 5. Open your browser and navigate to localhost url to see the app running.
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Usage 🧑‍💻
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Use the app to browse home decoration products, view product details, add items to your cart, proceed to checkout, tracking order, add items to wishlist and filter products. Ideal for those wanting to test UI features or customize the store.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- CONTRIBUTORS -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Contributors 🤝
+Contributions are welcome! Feel free to fork the repo, create feature branches, and submit pull requests. Please open issues for bugs or feature requests.
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Top contributors:
-
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
+<a href="https://github.com/Kimsor1111/PteasDecor/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Kimsor1111/PteasDecor" alt="contrib.rocks image" />
 </a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the Unlicense License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
-## Contact
+## Contact 📬
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+**Ang Kimsor** - [@angkimsor](https://angkimsor) - [angkimsor@gmail.com](mailto:angkimsor@gmail.com) - **Call Me ☎️ 85587932289**
+
+
+**Nak Danin** - [@nakdanin](https://nakdanin) - [nakdanin@gmail.com](mailto:nakdanin@gmail.com) - **Call Me ☎️**
+
+
+**Heng Ousa** - [@hengousa](https://hengousa) - [hengousa@gmail.com](mailto:hengousa@gmail.com) - **Call Me ☎️**
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Acknowledgments 🙏
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+* Thanks to the React community for the fantastic library and support.  
+* Inspiration and UI ideas from various home decor websites and e-commerce templates.  
+* Open-source projects and tutorials that helped guide this project’s development.  
+* [Shields.io](https://shields.io/) for awesome badges used in this README.  
+* Icons from [Font Awesome](https://fontawesome.com/) and other free icon libraries.
+* Images from [Alibaba](https://www.alibaba.com/) and other resources ecommerce website.
+* Special thanks to friends, mentors, or contributors who provided feedback or assistance.
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+
+
 
 
 
